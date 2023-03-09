@@ -1,0 +1,24 @@
+.weather__icon {
+    width: 20px;
+    height: 20px;
+}
+.weather__temp {
+    cursor: pointer;
+    font-size: 12px;
+}
+.weather-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 12px;
+}
+.weather__temp-wrapper {
+    position: relative;
+    margin-right: 10px;
+}
+.weather__temp-marking {
+    font-size: 10px;
+    position: absolute;
+    top: -4px;
+    left: 110%;
+}
