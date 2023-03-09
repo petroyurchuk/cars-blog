@@ -22,9 +22,10 @@ const Weather = (props: Props) => {
             globalNumber = 0
         }
     }
+
     useEffect(() => {
         fetch(
-            'https://api.openweathermap.org/data/2.5/weather?q=KYIV&units=metric&APPID=5d066958a60d315387d9492393935c19'
+            'https://api.openweathermap.org/data/2.5/weather?q=IVANO-FRANKIVSK&units=metric&APPID=5d066958a60d315387d9492393935c19'
         )
             .then((resolve) => resolve.json())
             .then((data) => {
