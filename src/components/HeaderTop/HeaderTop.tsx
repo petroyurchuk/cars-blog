@@ -4,6 +4,7 @@ import FullDate from './FullDate'
 
 import './HeaderTop.scss'
 import SignIn from './SignIn'
+import Social from './Social'
 type Props = {}
 const HeaderTop = (props: Props) => {
     return (
@@ -13,6 +14,7 @@ const HeaderTop = (props: Props) => {
                 <FullDate />
                 <SignIn />
             </div>
+            <Social />
         </Container>
     )
 }
