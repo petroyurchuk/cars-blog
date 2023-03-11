@@ -1,0 +1,14 @@
+.header-top__container {
+    height: 28px;
+    background-color: #f77b33;
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-top__left-side-container {
+    display: flex;
+    column-gap: 32px;
+    font-size: 12px;
+    align-items: center;
+}
