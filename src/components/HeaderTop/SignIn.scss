@@ -96,20 +96,6 @@
     width: 20px;
     z-index: 20;
     cursor: pointer;
-    &::before,
-    &::after {
-        position: absolute;
-        content: '';
-        width: 70%;
-        height: 2px;
-        background-color: #fff;
-        top: 7px;
-        transform: rotate(-30deg);
-    }
-    &::after {
-        top: calc(100% - 7px);
-        transform: rotate(30deg);
-    }
 }
 .sign-in__title {
     padding: 26px 0 22px 0;

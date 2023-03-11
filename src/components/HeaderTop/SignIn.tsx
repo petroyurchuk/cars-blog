@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-
+import BackArrow from '@mui/icons-material/ArrowBackIos'
 import './SignIn.scss'
 
 type Props = {}
@@ -96,7 +96,9 @@ const SignIn = (props: Props) => {
                         onClick={backToSignIn}
                         className="sign-in__back-arrow common-close-forms"
                         title="Back"
-                    ></div>
+                    >
+                        <BackArrow />
+                    </div>
                     <div
                         onClick={closeModalByButton}
                         className="sign-in__close"

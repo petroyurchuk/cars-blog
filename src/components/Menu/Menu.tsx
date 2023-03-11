@@ -1,5 +1,6 @@
 import './Menu.scss'
 import ArrowDown from '@mui/icons-material/ArrowDropDownOutlined'
+import ContainerSubsMenu from 'components/ContainerSubsMenu/ContainerSubsMenu'
 import SubMenu from 'components/SubMenu/SubMenu'
 import ArrayOfNames from 'utils/ArrayOfNames'
 type Props = {}
@@ -16,7 +17,7 @@ const Menu = (props: Props) => {
                     Cars
                     <ArrowDown />
                 </a>
-                <SubMenu arrayOfNamesList={ArrayOfNames[0].arrayOfNamesList} />
+                <ContainerSubsMenu />
             </li>
             <li className="list-menu__item">
                 <a href="/" className="list-menu__link">
@@ -30,11 +31,12 @@ const Menu = (props: Props) => {
                     <ArrowDown />
                 </a>
             </li>
-            <li className="list-menu__item">
+            <li className="list-menu__item list-menu__item_more">
                 <a href="/" className="list-menu__link">
                     More
                     <ArrowDown />
                 </a>
+                <SubMenu arrayOfNamesList={ArrayOfNames[1].arrayOfNamesList} />
             </li>
             <li className="list-menu__item">
                 <a href="/" className="list-menu__link">
