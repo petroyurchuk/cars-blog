@@ -1,5 +1,6 @@
 import ArrowDropDown from '@mui/icons-material/ArrowDropDown'
 import SubMenu from 'components/SubMenu/SubMenu'
+import BigSubMenu from 'components/BigSubMenu/BigSubMenu'
 import React, { useState } from 'react'
 
 import './Menu.scss'
@@ -16,7 +17,6 @@ const Menu: React.FC<ListProps> = ({ items }) => {
     const handlerEnter = (itemId: number) => {
         setHoveredItemId(itemId)
         setHoveredItem(true)
-        console.log(`Hello ${itemId}`)
     }
     return (
         <ul className="header-bottom__main-menu main-menu">
@@ -33,6 +33,7 @@ const Menu: React.FC<ListProps> = ({ items }) => {
                 </li>
             ))}
             {hoveredItem && <SubMenu index={hoveredItemId} />}
+            {hoveredItem && <BigSubMenu index={hoveredItemId} />}
         </ul>
     )
 }
