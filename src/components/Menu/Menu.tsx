@@ -1,53 +1,38 @@
-import './Menu.scss'
-import ArrowDown from '@mui/icons-material/ArrowDropDownOutlined'
-import ContainerSubsMenu from 'components/ContainerSubsMenu/ContainerSubsMenu'
+import ArrowDropDown from '@mui/icons-material/ArrowDropDown'
 import SubMenu from 'components/SubMenu/SubMenu'
-import ArrayOfNames from 'utils/ArrayOfNames'
-type Props = {}
-const Menu = (props: Props) => {
+import React, { useState } from 'react'
+
+import './Menu.scss'
+type ListItem = {
+    id: number
+    name: string
+}
+type ListProps = {
+    items: ListItem[]
+}
+const Menu: React.FC<ListProps> = ({ items }) => {
+    const [hoveredItemId, setHoveredItemId] = useState(0)
+    const [hoveredItem, setHoveredItem] = useState(false)
+    const handlerEnter = (itemId: number) => {
+        setHoveredItemId(itemId)
+        setHoveredItem(true)
+        console.log(`Hello ${itemId}`)
+    }
     return (
-        <ul className="menu__list list-menu">
-            <li className="list-menu__item">
-                <a href="/" className="list-menu__link">
-                    Home
-                </a>
-            </li>
-            <li className="list-menu__item">
-                <a href="/" className="list-menu__link">
-                    Cars
-                    <ArrowDown />
-                </a>
-                <ContainerSubsMenu />
-            </li>
-            <li className="list-menu__item">
-                <a href="/" className="list-menu__link">
-                    Reviews
-                    <ArrowDown />
-                </a>
-            </li>
-            <li className="list-menu__item">
-                <a href="/" className="list-menu__link">
-                    Tests
-                    <ArrowDown />
-                </a>
-            </li>
-            <li className="list-menu__item list-menu__item_more">
-                <a href="/" className="list-menu__link">
-                    More
-                    <ArrowDown />
-                </a>
-                <SubMenu arrayOfNamesList={ArrayOfNames[1].arrayOfNamesList} />
-            </li>
-            <li className="list-menu__item">
-                <a href="/" className="list-menu__link">
-                    About
-                </a>
-            </li>
-            <li className="list-menu__item">
-                <a href="/" className="list-menu__link">
-                    Contact
-                </a>
-            </li>
+        <ul className="header-bottom__main-menu main-menu">
+            {items.map((item) => (
+                <li
+                    key={item.id}
+                    className="main-menu__item"
+                    onMouseEnter={() => handlerEnter(item.id)}
+                >
+                    <a href="/" className="main-menu__link">
+                        {item.name}
+                        {![1, 6, 7].includes(item.id) && <ArrowDropDown />}
+                    </a>
+                </li>
+            ))}
+            {hoveredItem && <SubMenu index={hoveredItemId} />}
         </ul>
     )
 }

@@ -9,7 +9,7 @@ const ContainerSubsMenu = (props: ContainerSubsMenuProps) => {
     return (
         <div className="wrapper-subs-menu">
             <div className="container-subs-menu">
-                <SubMenu arrayOfNamesList={ArrayOfNames[0].arrayOfNamesList} />
+                {/* <SubMenu arrayOfNamesList={ArrayOfNames[0].arrayOfNamesList} /> */}
                 <SecondSubMenu />
             </div>
         </div>
