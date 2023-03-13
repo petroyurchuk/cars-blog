@@ -19,14 +19,17 @@ const Menu: React.FC<ListProps> = ({ items }) => {
         setHoveredItem(true)
     }
     return (
-        <ul className="header-bottom__main-menu main-menu">
+        <ul
+            className="header-bottom__main-menu main-menu"
+            onMouseLeave={() => setHoveredItem(false)}
+        >
             {items.map((item) => (
                 <li
                     key={item.id}
-                    className="main-menu__item"
+                    className="main-menu__item main-item"
                     onMouseEnter={() => handlerEnter(item.id)}
                 >
-                    <a href="/" className="main-menu__link">
+                    <a href="/" className="main-menu__link main-link">
                         {item.name}
                         {![1, 6, 7].includes(item.id) && <ArrowDropDown />}
                     </a>

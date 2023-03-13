@@ -1,4 +1,6 @@
 import ArrayOfNamesOfSubMenu from 'utils/ArrayOfNamesOfSubMenu'
+import MenuInSubMenu from 'components/MenuInSubMenu/MenuInSubMenu'
+import { useRef, useState } from 'react'
 import './SubMenu.scss'
 
 type PropsList = {
@@ -6,6 +8,18 @@ type PropsList = {
 }
 
 const SubMenu = ({ index }: PropsList) => {
+    const [hoveredItemId, setHoveredItemId] = useState(0)
+    const [hoveredItem, setHoveredItem] = useState(false)
+
+    const handlerEnter = (itemId: number) => {
+        if (!className.includes('more')) {
+            setHoveredItemId(itemId)
+            setHoveredItem(true)
+        } else {
+            setHoveredItemId(itemId)
+            setHoveredItem(false)
+        }
+    }
     const filteredList = ArrayOfNamesOfSubMenu.find(
         (item) => item.index === index
     )
@@ -17,14 +31,19 @@ const SubMenu = ({ index }: PropsList) => {
     const { namesOfList, className } = filteredList
 
     return (
-        <ul className={className}>
+        <ul className={className} onMouseLeave={() => setHoveredItem(false)}>
             {namesOfList.map((name, idx) => (
-                <li key={idx} className="sub-menu__item">
+                <li
+                    key={idx}
+                    className="sub-menu__item"
+                    onMouseEnter={() => handlerEnter(idx)}
+                >
                     <a href="/" className="sub-menu__link">
                         {name}
                     </a>
                 </li>
             ))}
+            {hoveredItem && <MenuInSubMenu index={hoveredItemId} />}
         </ul>
     )
 }

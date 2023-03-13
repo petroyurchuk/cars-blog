@@ -17,7 +17,7 @@ const ArrayOfNamesOfBigSubMenu: PropsArray[] = [
             'Mercedes AMG C63 S Sedan',
             'Chevy Silverado Midnight Edition',
         ],
-        className: 'sub-menu sub-menu__reviews big-sub-menu',
+        className: 'sub-menu__reviews big-sub-menu',
         images: [
             '/images/Reviews/reviews-01.jpg',
             '/images/Reviews/reviews-02.jpg',
@@ -36,7 +36,7 @@ const ArrayOfNamesOfBigSubMenu: PropsArray[] = [
             'The New Jaguar Crossover “F-Pace”',
             'Ferrari Testing Right Hand Drive California',
         ],
-        className: 'sub-menu sub-menu__tests big-sub-menu',
+        className: 'sub-menu__tests big-sub-menu',
         images: [
             '/images/Tests/tests-01.jpg',
             '/images/Tests/tests-02.jpg',
