@@ -1,6 +1,6 @@
 import ArrayOfNamesOfSubMenu from 'utils/ArrayOfNamesOfSubMenu'
 import MenuInSubMenu from 'components/MenuInSubMenu/MenuInSubMenu'
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import './SubMenu.scss'
 
 type PropsList = {
