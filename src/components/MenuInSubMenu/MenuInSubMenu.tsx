@@ -1,4 +1,6 @@
 import ArrayOfNamesOfMenuInSubMenu from 'utils/ArrayOfNamesOfMenuInSubMenu'
+import Slider from 'react-slick'
+
 import '../BigSubMenu/BigSubMenu.scss'
 import './MenuInSubMenu.scss'
 
@@ -14,22 +16,57 @@ const MenuInSubMenu = ({ index }: PropsList) => {
     if (!filteredList) {
         return null
     }
-
+    const settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: false,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    }
     const { namesOfList, className, images, title } = filteredList
 
     return (
         <ul className={className}>
-            {namesOfList.map((name, idx) => (
-                <li key={idx} className="sub-menu__item">
-                    <a href="/" className="sub-menu__link">
-                        <div className="image-wrapper">
-                            <img src={images[idx]} alt={title} />
-                            <span className="title-link">{title}</span>
-                        </div>
-                        {name}
-                    </a>
-                </li>
-            ))}
+            <Slider {...settings}>
+                {namesOfList.map((name, idx) => (
+                    <li key={idx} className="sub-menu__item">
+                        <a href="/" className="sub-menu__link">
+                            <div className="image-wrapper">
+                                <img src={images[idx]} alt={title} />
+                                <span className="title-link">{title}</span>
+                            </div>
+                            {name}
+                        </a>
+                    </li>
+                ))}
+            </Slider>
         </ul>
     )
 }

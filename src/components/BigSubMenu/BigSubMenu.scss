@@ -5,6 +5,7 @@
     position: absolute;
     left: 0;
     top: 100%;
+    height: 252px;
     padding: 22px 0 10px 0;
     justify-content: space-evenly;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
@@ -51,4 +52,9 @@
             background-color: #f77b33;
         }
     }
+}
+.slick-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }

@@ -16,6 +16,7 @@ const ArrayOfNamesOfBigSubMenu: PropsArray[] = [
             '2015 Chevrolet Camaro ZL1 Coupe',
             'Mercedes AMG C63 S Sedan',
             'Chevy Silverado Midnight Edition',
+            'Volkswagen Golf SportWagen TDI',
         ],
         className: 'sub-menu__reviews big-sub-menu',
         images: [
@@ -24,6 +25,7 @@ const ArrayOfNamesOfBigSubMenu: PropsArray[] = [
             '/images/Reviews/reviews-03.jpg',
             '/images/Reviews/reviews-04.jpg',
             '/images/Reviews/reviews-05.jpg',
+            '/images/Reviews/reviews-06.jpg',
         ],
     },
     {
@@ -35,6 +37,7 @@ const ArrayOfNamesOfBigSubMenu: PropsArray[] = [
             'Land Rover Range Rover Sport’s New Diesel V6',
             'The New Jaguar Crossover “F-Pace”',
             'Ferrari Testing Right Hand Drive California',
+            '2017 Ford Raptor Dominates Off-Road Trailchips',
         ],
         className: 'sub-menu__tests big-sub-menu',
         images: [
@@ -43,6 +46,7 @@ const ArrayOfNamesOfBigSubMenu: PropsArray[] = [
             '/images/Tests/tests-03.jpg',
             '/images/Tests/tests-04.jpg',
             '/images/Tests/tests-05.jpg',
+            '/images/Tests/tests-06.jpg',
         ],
     },
 ]

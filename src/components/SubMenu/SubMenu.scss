@@ -5,6 +5,7 @@
     padding: 22px 0 10px;
     background-color: #fafafa;
     width: 218px;
+    height: 252px;
 }
 .sub-menu__item {
     display: block;
@@ -28,6 +29,7 @@
 .sub-menu__more {
     left: 30%;
     width: 150px;
+    height: 150px;
     background-color: #fff;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
     & > .sub-menu__item > .sub-menu__link {

@@ -1,5 +1,6 @@
 import ArrayOfNamesOfSubMenu from 'utils/ArrayOfNamesOfSubMenu'
 import MenuInSubMenu from 'components/MenuInSubMenu/MenuInSubMenu'
+import ShowAllSubMenu from 'components/ShowAllSubMenu/ShowAllSubMenu'
 import { useState } from 'react'
 import './SubMenu.scss'
 
@@ -44,6 +45,7 @@ const SubMenu = ({ index }: PropsList) => {
                 </li>
             ))}
             {hoveredItem && <MenuInSubMenu index={hoveredItemId} />}
+            {hoveredItem && <ShowAllSubMenu index={hoveredItemId} />}
         </ul>
     )
 }
