@@ -63,6 +63,9 @@ const SignIn = (props: Props) => {
         if (!refEmail.current?.value) {
             refinfoBlock.current?.classList.add('open-info-block')
             setWarningMessage('EMAIL INCORRECT!')
+        } else {
+            refinfoBlock.current?.classList.remove('open-info-block')
+            refEmail.current.value = ''
         }
     }
 

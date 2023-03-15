@@ -1,0 +1,18 @@
+.sub-menu__cars__all {
+    overflow: hidden;
+    .sub-menu__item {
+        max-width: 196px;
+    }
+}
+.slick-list {
+    overflow: hidden;
+    max-width: 896px;
+    padding-left: 15px !important;
+}
+.slick-slider {
+    overflow: hidden;
+    width: 100%;
+}
+.slick-track {
+    display: flex !important;
+}

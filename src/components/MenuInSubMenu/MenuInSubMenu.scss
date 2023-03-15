@@ -1,0 +1,10 @@
+.menu-in-sub-menu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 894px;
+    height: 100%;
+    .sub-menu__item {
+        max-width: none;
+    }
+}
