@@ -26,6 +26,14 @@
         border-bottom: 1px solid #e0e0e0;
     }
 }
+.active-item {
+    a {
+        color: #f77b33;
+        background-color: #fff;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+}
 .sub-menu__more {
     left: 30%;
     width: 150px;
