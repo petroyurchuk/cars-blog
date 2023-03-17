@@ -1,6 +1,7 @@
 .burger-menu-toggle__container {
     position: absolute;
-    width: 100%;
+    overflow: hidden;
+    min-width: 100%;
     left: -100%;
     top: 0;
     min-height: 100vh;
