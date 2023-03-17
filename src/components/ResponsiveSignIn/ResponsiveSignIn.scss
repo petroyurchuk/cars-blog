@@ -1,0 +1,96 @@
+.responsive-sign-in {
+    position: relative;
+    z-index: 5;
+    .sign-in__form-forgot-password {
+        position: relative;
+        z-index: 5;
+        padding: 0 30px;
+        row-gap: 0;
+    }
+    .responsive-sign-in__error {
+        text-align: center;
+        color: #fff;
+        border: none;
+        -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+        margin: -9px -30px 24px;
+        font-size: 14px;
+        border-radius: 0;
+        padding: 12px;
+        position: relative;
+        z-index: 5;
+        background-color: rgba(255, 255, 255, 0.06);
+    }
+}
+.responsive-sign-in__close {
+    position: relative;
+    height: 74px;
+    display: flex;
+    align-items: center;
+}
+.responsive-sign-in__title {
+    position: absolute;
+    top: 0;
+    padding: 0 50px;
+    text-align: center;
+    line-height: 74px;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 17px;
+    height: 74px;
+    overflow: hidden;
+    margin: 0;
+}
+.responsive-sign-in-form {
+    padding: 0 30px;
+    #sign-in__user-name,
+    #sign-in__user-password,
+    #sig-in__email {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        font-weight: normal;
+        font-size: 17px;
+    }
+    #sign-in__user-name:focus,
+    #sign-in__user-password:focus,
+    #sig-in__email:focus {
+        border-color: #b0b0b0;
+    }
+    .sign-in__input-wrapper {
+        height: 76px;
+    }
+    .sign-in__input-placeholder {
+        opacity: 0.6;
+        text-transform: lowercase;
+    }
+    .responsive-sign-in-btn {
+        height: 52px;
+        padding: 1px 6px;
+        line-height: 50px;
+        border: none;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.36);
+        margin: 17px 0 15px;
+        font-size: 17px;
+        border-radius: 0;
+        background-color: #fff;
+        opacity: 0.8;
+        text-shadow: none;
+        letter-spacing: 0.5px;
+        font-weight: normal;
+    }
+    .sign-in__forgot-password:hover {
+        text-decoration: none;
+    }
+}
+.sign-in-panel-title {
+    text-align: center;
+    font-size: 16px;
+    padding: 30px 10px;
+    span {
+        display: inline-block;
+        font-size: 28px;
+        font-weight: bold;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
