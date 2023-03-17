@@ -88,7 +88,7 @@ const SignIn = (props: Props) => {
     }
 
     return (
-        <>
+        <div className="sign-in__container">
             <span className="sign-in-text" onClick={openSignIn}>
                 Sign in / Join
             </span>
@@ -193,7 +193,7 @@ const SignIn = (props: Props) => {
                     </form>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 export default SignIn
