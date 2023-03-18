@@ -41,7 +41,7 @@ const BurgerMenuToggle = (props: Props) => {
     const { namesOfList: namesOfNestedList } = filteredSecondList
 
     return (
-        <div className="burger-menu-toggle__container">
+        <div className="burger-menu-toggle__container common-background">
             {signInForm && (
                 <BackArrow
                     className="back-to-burger-menu"
