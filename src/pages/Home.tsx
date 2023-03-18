@@ -1,5 +1,11 @@
+import HomeSlider from 'components/HomeSlider/HomeSlider'
+
 type Props = {}
 const Home = (props: Props) => {
-    return <div>Home</div>
+    return (
+        <div>
+            <HomeSlider />
+        </div>
+    )
 }
 export default Home
