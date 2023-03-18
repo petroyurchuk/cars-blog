@@ -19,8 +19,16 @@
         color: #fff;
         text-decoration: none;
     }
+    .title-slide {
+        font-size: 65px;
+        font-weight: bolder;
+        text-shadow: 0 -9px 20px #000;
+    }
     .author-slide {
         bottom: 30px;
+        text-shadow: 0 -9px 10px #000;
+        letter-spacing: 2px;
+        font-size: 12px;
     }
 }
 .link-slide {
