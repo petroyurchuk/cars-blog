@@ -10,38 +10,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     transition: left 0.5s;
-    &::before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        background: rgba(8, 3, 0, 0.9);
-        background: -moz-linear-gradient(
-            45deg,
-            rgba(8, 3, 0, 0.9) 0%,
-            rgba(206, 120, 15, 0.9) 100%
-        );
-        background: -webkit-gradient(
-            left bottom,
-            right top,
-            color-stop(0%, rgba(8, 3, 0, 0.9)),
-            color-stop(100%, rgba(225, 138, 32, 0.9))
-        );
-        background: -webkit-linear-gradient(
-            45deg,
-            rgba(8, 3, 0, 0.9) 0%,
-            rgba(206, 120, 15, 0.9) 100%
-        );
-        background: linear-gradient(
-            180deg,
-            rgba(8, 3, 0, 0.9) 0%,
-            rgba(206, 120, 15, 0.9) 100%
-        );
-        z-index: 1;
-    }
+
     .main-menu {
         flex-direction: column;
         row-gap: 20px;
@@ -165,4 +134,39 @@
 }
 .container-for-toggle {
     transition: opacity 0.1s;
+}
+
+.common-background {
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        background: rgba(8, 3, 0, 0.9);
+        background: -moz-linear-gradient(
+            45deg,
+            rgba(8, 3, 0, 0.9) 0%,
+            rgba(206, 120, 15, 0.9) 100%
+        );
+        background: -webkit-gradient(
+            left bottom,
+            right top,
+            color-stop(0%, rgba(8, 3, 0, 0.9)),
+            color-stop(100%, rgba(225, 138, 32, 0.9))
+        );
+        background: -webkit-linear-gradient(
+            45deg,
+            rgba(8, 3, 0, 0.9) 0%,
+            rgba(206, 120, 15, 0.9) 100%
+        );
+        background: linear-gradient(
+            180deg,
+            rgba(8, 3, 0, 0.9) 0%,
+            rgba(206, 120, 15, 0.9) 100%
+        );
+        z-index: 1;
+    }
 }
