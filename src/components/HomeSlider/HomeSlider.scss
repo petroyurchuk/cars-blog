@@ -1,0 +1,36 @@
+.home-slider-wrapper {
+    padding: 20px 48px;
+}
+.home-slider__container {
+    max-width: 1068px;
+    margin: auto;
+}
+.wrapper-slide {
+    position: relative;
+    img {
+        flex: 1 1 1068px;
+        height: 600px;
+        max-height: 750px;
+    }
+    .title-slide,
+    .author-slide {
+        position: absolute;
+        left: 40px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .title-slide {
+        font-size: 65px;
+        font-weight: bolder;
+        text-shadow: 0 -9px 20px #000;
+    }
+    .author-slide {
+        bottom: 30px;
+        text-shadow: 0 -9px 10px #000;
+        letter-spacing: 2px;
+        font-size: 12px;
+    }
+}
+.link-slide {
+    display: flex;
+}
