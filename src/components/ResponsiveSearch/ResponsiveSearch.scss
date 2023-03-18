@@ -17,6 +17,7 @@ body {
 .responsive-search__form {
     display: none;
     position: absolute;
+    z-index: 100;
     top: 0;
     left: 0;
     transform: translateX(100%);
@@ -76,12 +77,4 @@ body {
 .responsive-search__container.show .wrapper-responsive-input::before {
     transition-delay: 0.5s;
     transform: scale(1);
-}
-.wrapper-search-form {
-    width: 100vw;
-    overflow: hidden;
-    height: 100vh;
-    position: relative;
-
-    background: rgb(137, 4, 4);
 }
