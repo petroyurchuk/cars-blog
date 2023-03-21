@@ -1,28 +1,8 @@
 import ArrayDataOfMainSlider from 'utils/ArrayDataOfMainSlider'
 import { Autoplay, Navigation, Pagination, A11y, EffectCreative } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { useState, useEffect } from 'react'
-import './HomeSlider.scss'
-import 'swiper/swiper-bundle.min.css'
 type Props = {}
-const HomeSlider = (props: Props) => {
-    const [arrayOfImages, setArrayOfImages] = useState<string[]>([])
-
-    useEffect(() => {
-        const updateArrayOfImages = () => {
-            const images = ArrayDataOfMainSlider.map((item) => {
-                if (window.innerWidth <= 950) {
-                    return item.imageSrcResponsiveFirst
-                } else {
-                    return item.imageSrc
-                }
-            })
-            setArrayOfImages(images)
-        }
-        updateArrayOfImages()
-        window.addEventListener('resize', updateArrayOfImages)
-        return () => window.removeEventListener('resize', updateArrayOfImages)
-    }, [])
+const ResponsiveHomeSlider = (props: Props) => {
     return (
         <div className="home-slider-wrapper">
             <div className="home-slider__container">
@@ -57,11 +37,11 @@ const HomeSlider = (props: Props) => {
                     }}
                 >
                     {ArrayDataOfMainSlider.map(
-                        ({ id, title, author }, index) => (
+                        ({ id, title, author, imageSrcResponsiveFirst }) => (
                             <SwiperSlide key={id} className="wrapper-slide">
                                 <a href="/" className="link-slide">
                                     <img
-                                        src={arrayOfImages[index]}
+                                        src={imageSrcResponsiveFirst}
                                         alt={title}
                                     />
                                     <h1 className="title-slide">{title}</h1>
@@ -77,4 +57,4 @@ const HomeSlider = (props: Props) => {
         </div>
     )
 }
-export default HomeSlider
+export default ResponsiveHomeSlider
