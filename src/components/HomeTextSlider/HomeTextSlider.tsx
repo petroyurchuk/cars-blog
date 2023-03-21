@@ -3,6 +3,7 @@ import 'swiper/swiper-bundle.min.css'
 import { Autoplay, Navigation, A11y, EffectCreative } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import './HomeTextSlider.scss'
+import { ArraySliderText } from 'utils/ArrayDataOfMainSlider'
 type Props = {}
 const HomeTextSlider = (props: Props) => {
     return (
@@ -29,8 +30,13 @@ const HomeTextSlider = (props: Props) => {
                 spaceBetween={50}
                 slidesPerView={1}
             >
-                <SwiperSlide className="slide-text">first slide</SwiperSlide>
-                <SwiperSlide className="slide-text">second slide</SwiperSlide>
+                {ArraySliderText.map((item, index) => (
+                    <SwiperSlide key={index} className="slide-text">
+                        <a href="/" className="slide-text__link">
+                            {item}
+                        </a>
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </Container>
     )

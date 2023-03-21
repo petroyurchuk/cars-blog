@@ -64,4 +64,12 @@ const ArrayDataOfMainSlider: PropsArray[] = [
             '/images/HomeSlider/home-slider-car-07(534x462).jpg',
     },
 ]
+
+export const ArraySliderText: string[] = [
+    '2016 Audi Q7 Debuts with Next-Gen Styling at Detroit',
+    '10 Best Car Deals of the Month in January',
+    'Volvo 142 Drift Car Project Hits Swedish Street',
+    'Could Your Child Win a Season’s Racing?',
+    'Chevy Silverado Midnight Edition',
+]
 export default ArrayDataOfMainSlider

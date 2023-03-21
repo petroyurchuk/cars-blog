@@ -8,6 +8,10 @@
 .home-text-slider__trending {
     display: block;
     white-space: nowrap;
+    color: #111;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
 }
 .slide-text {
     width: 90%;
@@ -41,4 +45,8 @@
         color: gray;
         padding: 2px 5px;
     }
+}
+.slide-text__link {
+    text-decoration: none;
+    color: #111;
 }
