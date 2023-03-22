@@ -24,10 +24,5 @@ const ArrayOfNamesOfSubMenu: PropsArray[] = [
         className: 'sub-menu sub-menu__more',
     },
 ]
-export const ArrayPopularPostsNames: string[] = [
-    'All',
-    'New Generations',
-    'First Contact',
-    'Hi-Tech',
-]
+
 export default ArrayOfNamesOfSubMenu
