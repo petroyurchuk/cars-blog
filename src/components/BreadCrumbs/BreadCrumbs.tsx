@@ -1,4 +1,5 @@
 import { Container } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 import './BreadCrumbs.scss'
 
@@ -6,9 +7,15 @@ type PropsBreadCrumbs = {
     data: {
         title: string
         namesOfList?: string[]
+        namesOfLinks?: string[]
     }
 }
 const BreadCrumbs = ({ data }: PropsBreadCrumbs) => {
+    const filterNamesOfList = data.namesOfLinks?.filter((item) => item)
+    if (!filterNamesOfList) {
+        return null
+    }
+    console.log(filterNamesOfList)
     return (
         <Container className="bread-crumbs__container">
             <div className="popular-posts__wrapper">
@@ -22,12 +29,12 @@ const BreadCrumbs = ({ data }: PropsBreadCrumbs) => {
                                     key={index}
                                     className="menu-navigation-popular-posts__item"
                                 >
-                                    <a
-                                        href="/"
+                                    <Link
+                                        to={filterNamesOfList[index]}
                                         className="menu-navigation-popular-posts__link"
                                     >
                                         {item}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
