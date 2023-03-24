@@ -1,5 +1,6 @@
 import HomeSlider from 'components/HomeSlider/HomeSlider'
 import HomeTextSlider from 'components/HomeTextSlider/HomeTextSlider'
+import LatestArticles from 'components/LatestArticles/LatestArticles'
 import PopularPosts from 'components/PopularPosts/PopularPosts'
 
 type Props = {}
@@ -9,6 +10,7 @@ const Home = (props: Props) => {
             <HomeSlider />
             <HomeTextSlider />
             <PopularPosts />
+            <LatestArticles />
         </div>
     )
 }

@@ -13,9 +13,14 @@ type PropsBreadCrumbs = {
 const BreadCrumbs = ({ data }: PropsBreadCrumbs) => {
     const filterNamesOfList = data.namesOfLinks?.filter((item) => item)
     if (!filterNamesOfList) {
-        return null
+        return (
+            <Container className="bread-crumbs__container">
+                <div className="popular-posts__wrapper">
+                    <h3 className="popular-posts-title">{data.title}</h3>
+                </div>
+            </Container>
+        )
     }
-    console.log(filterNamesOfList)
     return (
         <Container className="bread-crumbs__container">
             <div className="popular-posts__wrapper">

@@ -1,5 +1,9 @@
-.popular-posts__container {
+.popular-posts__container,
+.latest-articles__container {
     padding: 0px 48px;
+}
+.latest-articles__container {
+    padding-top: 25px;
 }
 .bread-crumbs__container {
     padding: 0;

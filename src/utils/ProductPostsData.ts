@@ -253,4 +253,52 @@ export const HiTechData: Props[] = [
     },
 ]
 
+export const latestArticlesDataProduct: Props[] = [
+    {
+        id: 1,
+        image: '/images/Products/Latest-Articles/latest-articles-01.jpg',
+        category: 'deals',
+        title: 'BFGoodrich Unveils Supersport G-Force Tires',
+        author: 'Alex Reeve',
+        data: 'December 28, 2015',
+        description: defaultDescription,
+    },
+    {
+        id: 2,
+        image: '/images/Products/Latest-Articles/latest-articles-02.jpg',
+        category: 'deals',
+        title: 'New Car Financing and Cash Offers for Youngsters',
+        author: 'Alex Reeve',
+        data: 'December 28, 2015',
+        description: defaultDescription,
+    },
+    {
+        id: 3,
+        image: '/images/Products/Latest-Articles/latest-articles-03.jpg',
+        category: 'deals',
+        title: '10 Best Car Deals of the Month in January',
+        author: 'Alex Reeve',
+        data: 'December 28, 2015',
+        description: defaultDescription,
+    },
+    {
+        id: 4,
+        image: '/images/Products/Latest-Articles/latest-articles-04.jpg',
+        category: 'deals',
+        title: 'Out-of-This-World Mansory Lamborghini Aventador',
+        author: 'Alex Reeve',
+        data: 'December 28, 2015',
+        description: defaultDescription,
+    },
+    {
+        id: 5,
+        image: '/images/Products/Latest-Articles/latest-articles-05.jpg',
+        category: 'deals',
+        title: 'Tesla Reportedly Loses $4,000 on Each Model S',
+        author: 'Alex Reeve',
+        data: 'December 28, 2015',
+        description: defaultDescription,
+    },
+]
+
 export default ProductPostsData
