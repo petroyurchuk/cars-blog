@@ -68,3 +68,48 @@
         flex-wrap: wrap;
     }
 }
+
+.products-slider__container {
+    position: relative;
+    overflow: hidden;
+    max-height: 2520px;
+    padding-bottom: 20px;
+    max-width: 1068px;
+
+    .product-post__container {
+        width: 1068px;
+    }
+    .swiper-button-prev {
+        position: absolute;
+        left: 1%;
+        top: 99.5%;
+    }
+    .swiper-button-next {
+        position: absolute;
+        left: 2%;
+        top: 99.5%;
+        margin-left: 15px;
+    }
+    .swiper-button-prev:hover::after,
+    .swiper-button-next:hover::after {
+        border-color: #f77b33;
+        background-color: #f77b33;
+        color: #fff;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        transform: rotate(90deg);
+        transition: all 0.2s;
+        font-size: 15px;
+        border: 1px solid #b7b7b7;
+        color: gray;
+        padding: 2px 5px;
+    }
+}
+.css-bhp9pd-MuiPaper-root-MuiCard-root {
+    box-shadow: none;
+}
+.css-46bh2p-MuiCardContent-root {
+    padding: 0;
+}
