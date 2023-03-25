@@ -2,7 +2,7 @@ import ArrowDropDown from '@mui/icons-material/ArrowDropDown'
 import SubMenu from 'components/SubMenu/SubMenu'
 import BigSubMenu from 'components/BigSubMenu/BigSubMenu'
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Menu.scss'
 type ListItem = {
     id: number
@@ -30,10 +30,10 @@ const Menu: React.FC<ListProps> = ({ items }) => {
                     className="main-menu__item main-item"
                     onMouseEnter={() => handlerEnter(item.id)}
                 >
-                    <Link to={item.to} className="main-menu__link main-link">
+                    <NavLink to={item.to} className="main-menu__link main-link">
                         {item.name}
                         {![1, 6, 7].includes(item.id) && <ArrowDropDown />}
-                    </Link>
+                    </NavLink>
                 </li>
             ))}
             {hoveredItem && <SubMenu index={hoveredItemId} />}
