@@ -6,10 +6,13 @@ import TabPanel from '@mui/lab/TabPanel'
 import { useState } from 'react'
 import './BreadCrumbs.scss'
 import AllPosts from 'components/ProductPostsList/AllPosts'
-import NewGenerations from 'components/ProductPostsList/NewGenerations'
-import FirstContact from 'components/ProductPostsList/FirstContact'
-import HiTech from 'components/ProductPostsList/HiTech'
+
 import Box from '@mui/material/Box'
+import ProductPostsListTab from 'components/ProductPostsList/ProductPostsListTab'
+
+import { FirstContactData } from 'utils/ProductPostsData'
+import { NewGenerationsData } from 'utils/ProductPostsData'
+import { HiTechData } from 'utils/ProductPostsData'
 
 type PropsBreadCrumbs = {
     data: {
@@ -19,6 +22,11 @@ type PropsBreadCrumbs = {
     }
 }
 const BreadCrumbs = ({ data }: PropsBreadCrumbs) => {
+    const objectOfArrays = {
+        firstArray: NewGenerationsData,
+        secondArray: FirstContactData,
+        thirdArray: HiTechData,
+    }
     const [value, setValue] = useState<string>('1')
     const handleChange = (event: React.SyntheticEvent, newValue: string) => {
         setValue(newValue)
@@ -67,16 +75,20 @@ const BreadCrumbs = ({ data }: PropsBreadCrumbs) => {
                         </Box>
 
                         <TabPanel value="1">
-                            <AllPosts />
+                            <AllPosts collectionOfData={objectOfArrays} />
                         </TabPanel>
                         <TabPanel value="2">
-                            <NewGenerations />
+                            <ProductPostsListTab
+                                arrayOfData={NewGenerationsData}
+                            />
                         </TabPanel>
                         <TabPanel value="3">
-                            <FirstContact />
+                            <ProductPostsListTab
+                                arrayOfData={FirstContactData}
+                            />
                         </TabPanel>
                         <TabPanel value="4">
-                            <HiTech />
+                            <ProductPostsListTab arrayOfData={HiTechData} />
                         </TabPanel>
                     </TabContext>
                 </Box>

@@ -1,10 +1,21 @@
-import { NewGenerationsData } from 'utils/ProductPostsData'
 import ProductPostsListItem from './ProductPostsListItem'
 import { Grid as MuiGrid } from '@mui/material'
 import { Grid, Navigation, A11y } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-type Props = {}
-const NewGenerations = (props: Props) => {
+
+type Props = {
+    id: number
+    image: string
+    category: string
+    title: string
+    author: string
+    data: string
+    description: string
+}
+type PropsListTab = {
+    arrayOfData: Props[]
+}
+const ProductPostsListTab = ({ arrayOfData }: PropsListTab) => {
     return (
         <div>
             <Swiper
@@ -16,7 +27,7 @@ const NewGenerations = (props: Props) => {
                 slidesPerView={5}
             >
                 <MuiGrid container spacing={3}>
-                    {NewGenerationsData.map(
+                    {arrayOfData.map(
                         ({
                             id,
                             image,
@@ -48,4 +59,4 @@ const NewGenerations = (props: Props) => {
         </div>
     )
 }
-export default NewGenerations
+export default ProductPostsListTab

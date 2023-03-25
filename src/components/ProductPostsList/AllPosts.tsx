@@ -1,11 +1,32 @@
-import ProductPostsData from 'utils/ProductPostsData'
 import ProductPostsListItem from './ProductPostsListItem'
 import { Grid as MuiGrid } from '@mui/material'
 import { Grid, Navigation, A11y } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-type Props = {}
-const AllPosts = (props: Props) => {
+type Props = {
+    id: number
+    image: string
+    category: string
+    title: string
+    author: string
+    data: string
+    description: string
+}
+
+type PropsAllPosts = {
+    collectionOfData: {
+        firstArray: Props[]
+        secondArray: Props[]
+        thirdArray: Props[]
+    }
+}
+const AllPosts = ({ collectionOfData }: PropsAllPosts) => {
+    const ArrayOfAllArrays = [
+        ...collectionOfData.firstArray,
+        ...collectionOfData.secondArray,
+        ...collectionOfData.thirdArray,
+    ]
+
     return (
         <div className="all-posts__container">
             <Swiper
@@ -17,17 +38,22 @@ const AllPosts = (props: Props) => {
                 slidesPerView={5}
             >
                 <MuiGrid container spacing={3}>
-                    {ProductPostsData.map(
-                        ({
-                            id,
-                            image,
-                            category,
-                            title,
-                            author,
-                            data,
-                            description,
-                        }) => (
-                            <SwiperSlide className="all-posts__slide" key={id}>
+                    {ArrayOfAllArrays.map(
+                        (
+                            {
+                                image,
+                                category,
+                                title,
+                                author,
+                                data,
+                                description,
+                            },
+                            index
+                        ) => (
+                            <SwiperSlide
+                                className="all-posts__slide"
+                                key={index}
+                            >
                                 <MuiGrid
                                     item
                                     className="product-post__container"
