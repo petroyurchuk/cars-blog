@@ -1,37 +1,40 @@
-type ListItem={
-  id: number
-  name:string
+type ListItem = {
+    id: number
+    name: string
+    to: string
 }
-const ArrayOfNames: ListItem[]=
-[
-{
-  id:1,
-  name:'Home',
-}
-,{
-  id:2,
-  name:"Cars",
-},
-{
-  id:3,
-  name:"Reviews",
-}
-,{
-  id:4,  
-  name:"Tests",
-},{
-  id:5,
-  name:"More"
-}
-,
-{id:6,
-  name:"About",
-},
-{
-  id:7,
-  name:"Contact",
-}
+const ArrayOfNames: ListItem[] = [
+    {
+        id: 1,
+        name: 'Home',
+        to: '/',
+    },
+    {
+        id: 2,
+        name: 'Cars',
+        to: '/cars',
+    },
+    {
+        id: 3,
+        name: 'Reviews',
+        to: '/reviews',
+    },
+    {
+        id: 4,
+        name: 'Tests',
+        to: '/tests',
+    },
+    {
+        id: 5,
+        name: 'More',
+        to: '/more',
+    },
+    { id: 6, name: 'About', to: '/about' },
+    {
+        id: 7,
+        name: 'Contact',
+        to: '/contact',
+    },
 ]
- 
 
 export default ArrayOfNames

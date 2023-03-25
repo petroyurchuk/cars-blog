@@ -41,3 +41,28 @@
         color: #111;
     }
 }
+
+.wrapper-board-of-breadcrumbs {
+    display: flex;
+    background-color: #f77b33;
+    padding: 0 10px;
+    max-height: 48px;
+    align-items: center;
+}
+.wrapper-list-tabs {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+
+    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+        max-height: 48px;
+        align-items: center;
+    }
+}
+.css-13xfq8m-MuiTabPanel-root {
+    padding-left: 0;
+    padding-right: 0;
+}
+.tab-popular-posts {
+    max-height: 38px;
+}
