@@ -11,34 +11,28 @@ const LatestArticles = (props: Props) => {
             <BreadCrumbs data={latestArticlesData} />
 
             <Grid container spacing={3}>
-                {latestArticlesDataProduct
-                    .slice(0, 5)
-                    .map(
-                        ({
-                            id,
-                            image,
-                            category,
-                            title,
-                            author,
-                            data,
-                            description,
-                        }) => (
-                            <Grid
-                                item
-                                key={id}
-                                className="product-post__container"
-                            >
-                                <ProductPostsListItem
-                                    image={image}
-                                    category={category}
-                                    title={title}
-                                    author={author}
-                                    data={data}
-                                    description={description}
-                                />
-                            </Grid>
-                        )
-                    )}
+                {latestArticlesDataProduct.map(
+                    ({
+                        id,
+                        image,
+                        category,
+                        title,
+                        author,
+                        data,
+                        description,
+                    }) => (
+                        <Grid item key={id} className="product-post__container">
+                            <ProductPostsListItem
+                                image={image}
+                                category={category}
+                                title={title}
+                                author={author}
+                                data={data}
+                                description={description}
+                            />
+                        </Grid>
+                    )
+                )}
             </Grid>
         </Container>
     )

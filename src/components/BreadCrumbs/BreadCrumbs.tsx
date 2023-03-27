@@ -31,7 +31,7 @@ const BreadCrumbs = ({ data }: PropsBreadCrumbs) => {
     const handleChange = (event: React.SyntheticEvent, newValue: string) => {
         setValue(newValue)
     }
-    const filterNamesOfList = data.namesOfLinks?.filter((item) => item)
+    const filterNamesOfList = data.namesOfList?.filter((item) => item)
     if (!filterNamesOfList) {
         return (
             <Container className="bread-crumbs__container">

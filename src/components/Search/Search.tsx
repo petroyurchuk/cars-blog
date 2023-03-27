@@ -4,6 +4,7 @@ import './Search.scss'
 type Props = {}
 const Search = (props: Props) => {
     const [showInputField, setShowInputField] = useState<string>('default hide')
+    const [query, setQuery] = useState<string>('')
 
     const showField = () => {
         setShowInputField((prevState) =>
@@ -16,7 +17,11 @@ const Search = (props: Props) => {
                 <SearchIcon onClick={showField} className="loop" />
             </div>
             <div className={showInputField}>
-                <input type="text" />
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    onChange={(e) => setQuery(e.target.value)}
+                />
                 <button>Search</button>
             </div>
         </div>
