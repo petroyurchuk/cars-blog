@@ -18,7 +18,7 @@ const PopularPostsListItem = ({
 }: Props) => {
     return (
         <div className="list-item__container list-item">
-            <Card>
+            <Card className="list-item__card">
                 <CardContent className="card-content__container">
                     <div className="list-item__wrapper-image">
                         <img
