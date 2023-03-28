@@ -1,0 +1,115 @@
+.card-content__container {
+    display: flex;
+    column-gap: 30px;
+    &:hover .list-item__title-link {
+        color: #f77b33;
+    }
+}
+.list-item__wrapper-image {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    .list-item__image {
+        flex: 1 1 auto;
+    }
+    .list-item__link-category {
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        padding: 5px 8px;
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 1;
+        background-color: #000;
+        &:hover {
+            background-color: #f77b33;
+        }
+    }
+}
+.list-item__title-link {
+    color: #111111;
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 900;
+    text-decoration: none;
+}
+.list-item__author {
+    color: #111111;
+    font-size: 13px;
+    font-weight: bold;
+}
+.list-item__data {
+    color: #767676;
+    font-size: 13px;
+    margin-left: 5px;
+}
+.list-item__description {
+    color: #767676;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 18px;
+}
+.list-item__read-more-btn {
+    background-color: #f77b33;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    &:hover {
+        background-color: #000;
+    }
+}
+@media (max-width: 975px) {
+    .card-content__container {
+        flex-wrap: wrap;
+    }
+}
+
+.products-slider__container {
+    position: relative;
+    overflow: hidden;
+    max-height: 2520px;
+    padding-bottom: 20px;
+    max-width: 1068px;
+
+    .product-post__container {
+        width: 1068px;
+    }
+    .swiper-button-prev {
+        position: absolute;
+        left: 1%;
+        top: 99.5%;
+    }
+    .swiper-button-next {
+        position: absolute;
+        left: 2%;
+        top: 99.5%;
+        margin-left: 15px;
+    }
+    .swiper-button-prev:hover::after,
+    .swiper-button-next:hover::after {
+        border-color: #f77b33;
+        background-color: #f77b33;
+        color: #fff;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        transform: rotate(90deg);
+        transition: all 0.2s;
+        font-size: 15px;
+        border: 1px solid #b7b7b7;
+        color: gray;
+        padding: 2px 5px;
+    }
+}
+.css-bhp9pd-MuiPaper-root-MuiCard-root {
+    box-shadow: none;
+}
+.css-46bh2p-MuiCardContent-root {
+    padding: 0;
+}

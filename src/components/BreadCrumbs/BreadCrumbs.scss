@@ -1,0 +1,71 @@
+.popular-posts__container,
+.latest-articles__container {
+    padding: 0px 48px;
+}
+.latest-articles__container {
+    padding-top: 25px;
+}
+.bread-crumbs__container {
+    padding: 0;
+}
+.popular-posts__wrapper {
+    display: flex;
+    background-color: #f77b33;
+    height: 33px;
+    align-items: center;
+    margin-bottom: 26px;
+    padding: 0 10px;
+}
+.popular-posts-title {
+    color: #fff;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+.popular-posts__navigation {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.navigation-popular-posts__menu {
+    display: flex;
+    column-gap: 30px;
+    list-style: none;
+}
+.menu-navigation-popular-posts__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 500;
+    &:hover {
+        color: #111;
+    }
+}
+
+.wrapper-board-of-breadcrumbs {
+    display: flex;
+    background-color: #f77b33;
+    padding: 0 10px;
+    max-height: 48px;
+    align-items: center;
+}
+.wrapper-list-tabs {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+
+    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+        max-height: 48px;
+        align-items: center;
+    }
+    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+        color: #fff;
+    }
+}
+.css-13xfq8m-MuiTabPanel-root {
+    padding-left: 0;
+    padding-right: 0;
+}
+.tab-popular-posts {
+    max-height: 38px;
+}

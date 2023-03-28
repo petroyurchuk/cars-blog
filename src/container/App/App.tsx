@@ -1,8 +1,10 @@
 import Footer from 'container/Footer/Footer'
 import Header from 'container/Header/Header'
-import Main from 'container/Main/Main'
+import Home from 'pages/Home/Home'
+import Cars from 'pages/Cars/Cars'
 import CssBaseline from '@mui/material/CssBaseline'
 import { StyledEngineProvider } from '@mui/material/styles'
+import { Routes, Route } from 'react-router-dom'
 
 import './App.scss'
 import { Container } from '@mui/system'
@@ -13,7 +15,12 @@ const App = (props: Props) => {
             <CssBaseline />
             <Container className="wrapper-app">
                 <Header />
-                <Main />
+                <div className="main__container">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/cars" element={<Cars />} />
+                    </Routes>
+                </div>
                 <Footer />
             </Container>
         </StyledEngineProvider>

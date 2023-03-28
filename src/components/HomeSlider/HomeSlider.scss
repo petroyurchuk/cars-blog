@@ -1,5 +1,5 @@
 .home-slider-wrapper {
-    padding: 20px 48px;
+    padding: 0 48px 0px;
 }
 .home-slider__container {
     max-width: 1068px;
@@ -33,4 +33,19 @@
 }
 .link-slide {
     display: flex;
+}
+@media (max-width: 1050px) {
+    .wrapper-slide .title-slide {
+        font-size: 60px;
+    }
+}
+@media (max-width: 900px) {
+    .wrapper-slide .title-slide {
+        font-size: 50px;
+    }
+}
+@media (max-width: 650px) {
+    .wrapper-slide .title-slide {
+        font-size: 40px;
+    }
 }

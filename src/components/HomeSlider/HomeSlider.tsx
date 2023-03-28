@@ -1,10 +1,28 @@
 import ArrayDataOfMainSlider from 'utils/ArrayDataOfMainSlider'
 import { Autoplay, Navigation, Pagination, A11y, EffectCreative } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { useState, useEffect } from 'react'
 import './HomeSlider.scss'
 import 'swiper/swiper-bundle.min.css'
 type Props = {}
 const HomeSlider = (props: Props) => {
+    const [arrayOfImages, setArrayOfImages] = useState<string[]>([])
+
+    useEffect(() => {
+        const updateArrayOfImages = () => {
+            const images = ArrayDataOfMainSlider.map((item) => {
+                if (window.innerWidth <= 950) {
+                    return item.imageSrcResponsiveFirst
+                } else {
+                    return item.imageSrc
+                }
+            })
+            setArrayOfImages(images)
+        }
+        updateArrayOfImages()
+        window.addEventListener('resize', updateArrayOfImages)
+        return () => window.removeEventListener('resize', updateArrayOfImages)
+    }, [])
     return (
         <div className="home-slider-wrapper">
             <div className="home-slider__container">
@@ -37,14 +55,15 @@ const HomeSlider = (props: Props) => {
                     pagination={{
                         clickable: true,
                     }}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
                 >
                     {ArrayDataOfMainSlider.map(
-                        ({ id, title, imageSrc, author }) => (
+                        ({ id, title, author }, index) => (
                             <SwiperSlide key={id} className="wrapper-slide">
                                 <a href="/" className="link-slide">
-                                    <img src={imageSrc} alt={title} />
+                                    <img
+                                        src={arrayOfImages[index]}
+                                        alt={title}
+                                    />
                                     <h1 className="title-slide">{title}</h1>
                                     <span className="author-slide">
                                         {author} - December 28, 2015
