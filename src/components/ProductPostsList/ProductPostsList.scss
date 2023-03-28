@@ -107,9 +107,10 @@
         padding: 2px 5px;
     }
 }
-.css-bhp9pd-MuiPaper-root-MuiCard-root {
-    box-shadow: none;
-}
-.css-46bh2p-MuiCardContent-root {
+
+.card-content__container {
     padding: 0;
+}
+.list-item__card {
+    box-shadow: none;
 }
