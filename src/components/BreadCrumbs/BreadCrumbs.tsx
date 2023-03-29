@@ -31,6 +31,7 @@ const BreadCrumbs = ({ data }: PropsBreadCrumbs) => {
     const handleChange = (event: React.SyntheticEvent, newValue: string) => {
         setValue(newValue)
     }
+
     const filterNamesOfList = data.namesOfList?.filter((item) => item)
     if (!filterNamesOfList) {
         return (
@@ -74,7 +75,7 @@ const BreadCrumbs = ({ data }: PropsBreadCrumbs) => {
                             </div>
                         </Box>
 
-                        <TabPanel value="1">
+                        <TabPanel className="bread-crumbs__tabpanel" value="1">
                             <AllPosts collectionOfData={objectOfArrays} />
                         </TabPanel>
                         <TabPanel value="2">

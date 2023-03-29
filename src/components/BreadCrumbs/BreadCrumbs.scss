@@ -58,14 +58,15 @@
         max-height: 48px;
         align-items: center;
     }
-    .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
-        color: #fff;
-    }
 }
-.css-13xfq8m-MuiTabPanel-root {
+
+.bread-crumbs__tabpanel {
     padding-left: 0;
     padding-right: 0;
 }
 .tab-popular-posts {
     max-height: 38px;
+    &:focus {
+        color: #fff;
+    }
 }
