@@ -78,17 +78,17 @@ const BreadCrumbs = ({ data }: PropsBreadCrumbs) => {
                         <TabPanel className="bread-crumbs__tabpanel" value="1">
                             <AllPosts collectionOfData={objectOfArrays} />
                         </TabPanel>
-                        <TabPanel value="2">
+                        <TabPanel className="bread-crumbs__tabpanel" value="2">
                             <ProductPostsListTab
                                 arrayOfData={NewGenerationsData}
                             />
                         </TabPanel>
-                        <TabPanel value="3">
+                        <TabPanel className="bread-crumbs__tabpanel" value="3">
                             <ProductPostsListTab
                                 arrayOfData={FirstContactData}
                             />
                         </TabPanel>
-                        <TabPanel value="4">
+                        <TabPanel className="bread-crumbs__tabpanel" value="4">
                             <ProductPostsListTab arrayOfData={HiTechData} />
                         </TabPanel>
                     </TabContext>
