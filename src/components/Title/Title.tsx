@@ -6,7 +6,13 @@ type Props = {
 const Title = ({ children }: Props) => {
     return (
         <>
-            <Typography variant="h4" component="h1">
+            <Typography
+                variant="h4"
+                component="h1"
+                sx={{
+                    paddingBottom: '18px',
+                }}
+            >
                 {children}
             </Typography>
         </>
