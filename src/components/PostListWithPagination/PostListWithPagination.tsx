@@ -64,7 +64,7 @@ const PostListWithPagination = ({
                 />
                 <div className="info-about-pages">
                     Page {currentPage} of{' '}
-                    {posts.length / postsPerPage + numberForPlus}
+                    {Math.ceil(posts.length / postsPerPage + numberForPlus)}
                 </div>
             </div>
         </div>

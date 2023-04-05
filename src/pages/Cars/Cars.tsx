@@ -6,6 +6,8 @@ import PostListWithPagination from 'components/PostListWithPagination/PostListWi
 
 import SearchSortPostsOnPages from 'components/SearchSortPostsOnPages/SearchSortPostsOnPages'
 import { useAppSelector } from 'redux/hooks'
+import SocialList from 'components/Social/SocialList'
+import { socialListArray } from 'utils/socialListArray'
 
 type Props = {}
 const Cars = (props: Props) => {
@@ -21,7 +23,10 @@ const Cars = (props: Props) => {
                     numberForPlus={0}
                     numberForMinus={1}
                 />
-                <SearchSortPostsOnPages />
+                <div className="wrapper-right-side">
+                    <SearchSortPostsOnPages />
+                    <SocialList socialListData={socialListArray} />
+                </div>
             </div>
         </div>
     )
