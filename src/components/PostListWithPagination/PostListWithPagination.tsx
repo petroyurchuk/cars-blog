@@ -18,15 +18,19 @@ interface Props {
     posts: Post[]
     postsPerPage: number
     onChangePage: (page: number) => void
+    numberForPlus?: number
+    numberForMinus?: number
 }
 
 const PostListWithPagination = ({
     posts,
     postsPerPage,
     onChangePage,
+    numberForPlus = 1,
+    numberForMinus = 2,
 }: Props) => {
     const [currentPage, setCurrentPage] = useState(1)
-    const totalPages = Math.ceil(posts.length / postsPerPage) + 1
+    const totalPages = Math.ceil(posts.length / postsPerPage) + numberForPlus
     const handlePageChange = (
         event: React.ChangeEvent<unknown>,
         page: number
@@ -35,7 +39,7 @@ const PostListWithPagination = ({
         onChangePage(page)
     }
 
-    let startIndex = (currentPage - 2) * postsPerPage
+    let startIndex = (currentPage - numberForMinus) * postsPerPage
 
     const selectedPosts = posts.slice(startIndex, startIndex + postsPerPage)
 
@@ -55,7 +59,7 @@ const PostListWithPagination = ({
                     size="medium"
                 />
                 <div className="info-about-pages">
-                    Page {currentPage} of {posts.length / 5 + 1}
+                    Page {currentPage} of {posts.length / 5 + numberForPlus}
                 </div>
             </div>
         </div>
