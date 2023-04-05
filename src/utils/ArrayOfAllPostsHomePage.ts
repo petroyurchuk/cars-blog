@@ -4,10 +4,10 @@ type Props = {
     category: string
     title: string
     author: string
-    data: string
+    date: string
     description: string
 }
-const defaultDescription =
+export const defaultDescription =
     'A breathless session saw a quite staggering 23 cars blanketed by just eight tenths of a second with positions changing at almost every moment. Such was the competitiveness that the ballast-laden VW of Jason Plato could only manage 22nd on the grid, although the double champion has cited an as yet unknown problem with...'
 
 const ArrayOfAllPostsHomePage: Props[] = [
@@ -17,7 +17,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'deals',
         title: 'Junkyard All-You-Can-Carry Sale Next Monday',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -26,7 +26,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'tunning',
         title: 'Justin Bieber’s Ferrari 458 Italia Transformation',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -35,7 +35,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'tunning',
         title: 'Limited Production Confirmed for McLaren 675LT',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -44,7 +44,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'tunning',
         title: 'There’s Nothing Funny About Toyota’s Fuel Leaks',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -53,7 +53,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'tunning',
         title: 'Hackers Seize Control of a Tesla Model S',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -62,7 +62,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'tunning',
         title: 'Modify Your New Mercedes-Benz C-Class',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -71,7 +71,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'tunning',
         title: 'Volvo 142 Drift Car Project Hits Swedish Street',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -80,7 +80,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'life',
         title: 'Fiat Forced to Buy Back 500K Vehicles',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -89,7 +89,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'life',
         title: 'BMW Overhauls Wheelchair for Paralympics',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -98,7 +98,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'life',
         title: 'Mad Max Fury Road Re-Created With Go-Karts',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -107,7 +107,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'life',
         title: 'Cars in Miniature Swarm Greater Boston Area',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -116,7 +116,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'life',
         title: 'Get Ready for New Diesel Cadillacs',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -125,7 +125,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'life',
         title: 'All But 2 Buick Models Built Overseas',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -134,7 +134,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'tests',
         title: 'Volkswagen Beetle R-Line is a Little Beast',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -143,7 +143,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'tests',
         title: 'Land Rover Range Rover Sport’s New Diesel V6',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -152,7 +152,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'tests',
         title: 'The New Jaguar Crossover “F-Pace”',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -161,7 +161,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'tests',
         title: 'Ferrari Testing Right Hand Drive California',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -170,7 +170,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'tests',
         title: '2017 Ford Raptor Dominates Off-Road Trailchips',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -179,7 +179,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'reviews',
         title: '2016 Chevrolet Malibu: No Yawning!',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -188,7 +188,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'reviews',
         title: 'Having Fun on Country Roads with Audi R8',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -197,7 +197,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'reviews',
         title: '2015 Chevrolet Camaro ZL1 Coupe',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -206,7 +206,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'reviews',
         title: 'Mercedes AMG C63 S Sedan',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -215,7 +215,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'reviews',
         title: 'Chevy Silverado Midnight Edition',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -224,7 +224,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'reviews',
         title: 'Volkswagen Golf SportWagen TDI',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -233,7 +233,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'motorSports',
         title: 'Scenes From the 2015 Pebble Beach Tour',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -242,7 +242,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'motorSports',
         title: '’70s F1 cars will star at Goodwood',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -251,7 +251,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'motorSports',
         title: 'Could Your Child Win a Season’s Racing?',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -260,7 +260,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'motorSports',
         title: 'Octane’s Goodwood Festival of Speed',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -269,7 +269,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'motorSports',
         title: 'All the Best Bits of Goodwood Motorsport',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -278,7 +278,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         category: 'motorSports',
         title: 'LaFerrari, McLaren P1, and Porsche 918 On-Track',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
 ]

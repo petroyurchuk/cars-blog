@@ -7,7 +7,7 @@ type Props = {
     category: string
     title: string
     author: string
-    data: string
+    date: string
     description?: string
 }
 type PropsPreview = {
@@ -22,7 +22,7 @@ const Preview = ({ dataPosts }: PropsPreview) => {
                         (item) => item.category.toLowerCase() === 'motorsports'
                     )
                     .slice(0, 2)
-                    .map(({ id, image, title, author, data, category }) => (
+                    .map(({ id, image, title, author, date, category }) => (
                         <Grid
                             className="wrapper-post-preview"
                             item
@@ -42,7 +42,7 @@ const Preview = ({ dataPosts }: PropsPreview) => {
                                         {author}
                                     </span>
                                     <span className="preview-date">
-                                        - {data}
+                                        - {date}
                                     </span>
                                 </div>
                             </div>

@@ -6,7 +6,7 @@ type Props = {
     category: string
     title: string
     author: string
-    data: string
+    date: string
     description: string
 }
 type PropsProductPostsList = {
@@ -23,7 +23,7 @@ const ProductPostsList = ({ posts }: PropsProductPostsList) => {
                         category,
                         title,
                         author,
-                        data,
+                        date,
                         description,
                     }) => (
                         <Grid key={id} item className="product-post__container">
@@ -32,7 +32,7 @@ const ProductPostsList = ({ posts }: PropsProductPostsList) => {
                                 category={category}
                                 title={title}
                                 author={author}
-                                data={data}
+                                data={date}
                                 description={description}
                             />
                         </Grid>

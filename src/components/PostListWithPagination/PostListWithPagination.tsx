@@ -1,23 +1,23 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Pagination } from '@mui/material'
 
-import ProductPostsList from 'components/ProductPostsList/ProductPostsList'
-
 import './PostListWithPagination.scss'
+import ProductPostsList from 'components/ProductPostsList/ProductPostsList'
+import PostsList from 'components/Posts/PostsList'
 interface Post {
     id: number
     image: string
     category: string
     title: string
     author: string
-    data: string
+    date: string
     description: string
 }
 
 interface Props {
     posts: Post[]
     postsPerPage: number
-    onChangePage: (page: number) => void
+    onChangePage?: (page: number) => void
     numberForPlus?: number
     numberForMinus?: number
 }
@@ -36,7 +36,7 @@ const PostListWithPagination = ({
         page: number
     ) => {
         setCurrentPage(page)
-        onChangePage(page)
+        onChangePage!(page)
     }
 
     let startIndex = (currentPage - numberForMinus) * postsPerPage
@@ -45,7 +45,11 @@ const PostListWithPagination = ({
 
     return (
         <div>
-            <ProductPostsList posts={selectedPosts} />
+            {numberForPlus === 1 ? (
+                <ProductPostsList posts={selectedPosts} />
+            ) : (
+                <PostsList posts={selectedPosts} />
+            )}
             <div className="wrapper-pagination">
                 <Pagination
                     count={totalPages}
@@ -59,7 +63,8 @@ const PostListWithPagination = ({
                     size="medium"
                 />
                 <div className="info-about-pages">
-                    Page {currentPage} of {posts.length / 5 + numberForPlus}
+                    Page {currentPage} of{' '}
+                    {posts.length / postsPerPage + numberForPlus}
                 </div>
             </div>
         </div>
