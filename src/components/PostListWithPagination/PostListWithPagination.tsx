@@ -36,7 +36,9 @@ const PostListWithPagination = ({
         page: number
     ) => {
         setCurrentPage(page)
-        onChangePage!(page)
+        if (onChangePage) {
+            onChangePage(page)
+        }
     }
 
     let startIndex = (currentPage - numberForMinus) * postsPerPage

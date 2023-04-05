@@ -1,5 +1,4 @@
 .social-block {
-    margin: 0 8px 16px;
     height: 100px;
     width: 97px;
     display: flex;
@@ -26,4 +25,5 @@
 }
 .social-list__wrapper {
     display: flex;
+    column-gap: 16px;
 }
