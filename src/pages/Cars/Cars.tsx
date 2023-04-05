@@ -4,11 +4,12 @@ import './Cars.scss'
 import ArrayOfAllPostsHomePage from 'utils/ArrayOfAllPostsHomePage'
 import PostListWithPagination from 'components/PostListWithPagination/PostListWithPagination'
 
-import { postsArray } from 'utils/postsArray'
 import SearchSortPostsOnPages from 'components/SearchSortPostsOnPages/SearchSortPostsOnPages'
+import { useAppSelector } from 'redux/hooks'
 
 type Props = {}
 const Cars = (props: Props) => {
+    const postsArray = useAppSelector((state) => state.posts.filteredPosts)
     return (
         <div className="cars-page__container">
             <Title>Cars</Title>
