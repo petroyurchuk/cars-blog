@@ -16,8 +16,12 @@ const Search = (props: Props) => {
                 <SearchIcon onClick={showField} className="loop" />
             </div>
             <div className={showInputField}>
-                <input type="text" placeholder="Search..." />
-                <button>Search</button>
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    className="search-input-field"
+                />
+                <button className="search-btn">Search</button>
             </div>
         </div>
     )
