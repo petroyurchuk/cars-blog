@@ -8,7 +8,7 @@ import SearchSortPostsOnPages from 'components/SearchSortPostsOnPages/SearchSort
 import { useAppSelector } from 'redux/hooks'
 import SocialList from 'components/Social/SocialList'
 import { socialListArray } from 'utils/socialListArray'
-import SideBarHeader from 'components/SideBar/SideBarHeader'
+import Sidebar from 'components/SideBar/Sidebar'
 
 type Props = {}
 const Cars = (props: Props) => {
@@ -27,7 +27,7 @@ const Cars = (props: Props) => {
                 <div className="wrapper-right-side">
                     <SearchSortPostsOnPages />
                     <SocialList socialListData={socialListArray} />
-                    <SideBarHeader>Weather</SideBarHeader>
+                    <Sidebar />
                 </div>
             </div>
         </div>

@@ -18,6 +18,7 @@ const SearchSortPostsOnPages = (props: Props) => {
                 value={valueSearch}
             />
             <button
+                style={{ width: '85px', fontWeight: 'bold', fontSize: '17px' }}
                 onClick={() =>
                     dispatch(handleSearchFilter({ title: valueSearch }))
                 }
