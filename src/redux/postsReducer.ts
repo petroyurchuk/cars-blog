@@ -1,16 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { postsArray, postsReviewsArray, PropsPosts } from 'utils/postsArray'
+import {
+    postsArray,
+    postsReviewsArray,
+    postsTestsArray,
+    PropsPosts,
+} from 'utils/postsArray'
 
 const initialState: {
     posts: PropsPosts[]
     filteredPosts: PropsPosts[]
     postsReviews: PropsPosts[]
     filteredReviewsPosts: PropsPosts[]
+    filteredTestsPosts: PropsPosts[]
+    postsTests: PropsPosts[]
 } = {
     posts: postsArray,
     filteredPosts: postsArray,
     postsReviews: postsReviewsArray,
     filteredReviewsPosts: postsReviewsArray,
+    filteredTestsPosts: postsTestsArray,
+    postsTests: postsTestsArray,
 }
 
 export const postsSlice = createSlice({
@@ -25,6 +34,12 @@ export const postsSlice = createSlice({
             }
             if (action.payload.sortPage === 'reviewsPage') {
                 state.filteredReviewsPosts = state.postsReviews.filter(
+                    ({ title }) =>
+                        title.toLowerCase().includes(action.payload.title)
+                )
+            }
+            if (action.payload.sortPage === 'testsPage') {
+                state.filteredTestsPosts = state.postsTests.filter(
                     ({ title }) =>
                         title.toLowerCase().includes(action.payload.title)
                 )

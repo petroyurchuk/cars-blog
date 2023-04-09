@@ -9,6 +9,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import './App.scss'
 import { Container } from '@mui/system'
+import Tests from 'pages/Tests/Tests'
 
 type Props = {}
 const App = (props: Props) => {
@@ -22,6 +23,7 @@ const App = (props: Props) => {
                         <Route path="/" element={<Home />} />
                         <Route path="/cars" element={<Cars />} />
                         <Route path="/reviews" element={<Reviews />} />
+                        <Route path="/tests" element={<Tests />} />
                     </Routes>
                 </div>
                 <Footer />
