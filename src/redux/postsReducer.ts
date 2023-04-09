@@ -1,12 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { postsArray, PropsPosts } from 'utils/postsArray'
+import { postsArray, postsReviewsArray, PropsPosts } from 'utils/postsArray'
 
 const initialState: {
     posts: PropsPosts[]
     filteredPosts: PropsPosts[]
+    postsReviews: PropsPosts[]
+    filteredReviewsPosts: PropsPosts[]
 } = {
     posts: postsArray,
     filteredPosts: postsArray,
+    postsReviews: postsReviewsArray,
+    filteredReviewsPosts: postsReviewsArray,
 }
 
 export const postsSlice = createSlice({
@@ -14,9 +18,17 @@ export const postsSlice = createSlice({
     initialState,
     reducers: {
         handleSearchFilter: (state, action) => {
-            state.filteredPosts = state.posts.filter(({ title }) =>
-                title.toLocaleLowerCase().includes(action.payload.title)
-            )
+            if (action.payload.sortPage === 'carsPage') {
+                state.filteredPosts = state.posts.filter(({ title }) =>
+                    title.toLowerCase().includes(action.payload.title)
+                )
+            }
+            if (action.payload.sortPage === 'reviewsPage') {
+                state.filteredReviewsPosts = state.postsReviews.filter(
+                    ({ title }) =>
+                        title.toLowerCase().includes(action.payload.title)
+                )
+            }
         },
     },
 })

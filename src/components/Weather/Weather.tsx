@@ -14,7 +14,6 @@ type PropsStateWeather = {
     minTemp: number
     speedWind: number
     cloud: number
-
     isClicked: boolean
 }
 
@@ -31,7 +30,6 @@ const Weather = () => {
         minTemp: 0,
         speedWind: 0,
         cloud: 0,
-
         isClicked: false,
     })
 

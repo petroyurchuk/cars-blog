@@ -2,12 +2,14 @@ import Footer from 'container/Footer/Footer'
 import Header from 'container/Header/Header'
 import Home from 'pages/Home/Home'
 import Cars from 'pages/Cars/Cars'
+import Reviews from 'pages/Reviews/Reviews'
 import CssBaseline from '@mui/material/CssBaseline'
 import { StyledEngineProvider } from '@mui/material/styles'
 import { Routes, Route } from 'react-router-dom'
 
 import './App.scss'
 import { Container } from '@mui/system'
+
 type Props = {}
 const App = (props: Props) => {
     return (
@@ -19,6 +21,7 @@ const App = (props: Props) => {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/cars" element={<Cars />} />
+                        <Route path="/reviews" element={<Reviews />} />
                     </Routes>
                 </div>
                 <Footer />

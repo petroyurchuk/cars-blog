@@ -12,14 +12,16 @@ type Props = {
 }
 type PropsPreview = {
     dataPosts: Props[]
+    categoryForSort: string
 }
-const Preview = ({ dataPosts }: PropsPreview) => {
+const Preview = ({ dataPosts, categoryForSort }: PropsPreview) => {
     return (
         <div className="preview-wrapper">
             <Grid container columnSpacing={1}>
                 {dataPosts
                     .filter(
-                        (item) => item.category.toLowerCase() === 'motorsports'
+                        (item) =>
+                            item.category.toLowerCase() === categoryForSort
                     )
                     .slice(0, 2)
                     .map(({ id, image, title, author, date, category }) => (

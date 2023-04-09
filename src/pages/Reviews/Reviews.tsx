@@ -1,7 +1,6 @@
 import Preview from 'components/Preview/Preview'
 import Title from 'components/Title/Title'
-import './Cars.scss'
-import ArrayOfAllPostsHomePage from 'utils/ArrayOfAllPostsHomePage'
+
 import PostListWithPagination from 'components/PostListWithPagination/PostListWithPagination'
 
 import SearchSortPostsOnPages from 'components/SearchSortPostsOnPages/SearchSortPostsOnPages'
@@ -9,17 +8,20 @@ import { useAppSelector } from 'redux/hooks'
 import SocialList from 'components/Social/SocialList'
 import { socialListArray } from 'utils/socialListArray'
 import Sidebar from 'components/SideBar/Sidebar'
+import ArrayOfAllPostsHomePage from 'utils/ArrayOfAllPostsHomePage'
 
 type Props = {}
-const Cars = (props: Props) => {
-    const postsArray = useAppSelector((state) => state.posts.filteredPosts)
+const Reviews = (props: Props) => {
+    const postsArray = useAppSelector(
+        (state) => state.posts.filteredReviewsPosts
+    )
 
     return (
         <div className="cars-page__container">
-            <Title>Cars</Title>
+            <Title>Reviews</Title>
             <Preview
                 dataPosts={ArrayOfAllPostsHomePage}
-                categoryForSort="motorsports"
+                categoryForSort="reviews"
             />
             <div className="cars-page-main-content-wrapper">
                 <PostListWithPagination
@@ -29,7 +31,7 @@ const Cars = (props: Props) => {
                     numberForMinus={1}
                 />
                 <div className="wrapper-right-side">
-                    <SearchSortPostsOnPages sortPage="carsPage" />
+                    <SearchSortPostsOnPages sortPage="reviewsPage" />
                     <SocialList socialListData={socialListArray} />
                     <Sidebar />
                 </div>
@@ -37,4 +39,4 @@ const Cars = (props: Props) => {
         </div>
     )
 }
-export default Cars
+export default Reviews

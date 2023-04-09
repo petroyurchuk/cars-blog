@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { useAppDispatch } from 'redux/hooks'
 import { handleSearchFilter } from 'redux/postsReducer'
 
-type Props = {}
-const SearchSortPostsOnPages = (props: Props) => {
+type Props = {
+    sortPage: string
+}
+const SearchSortPostsOnPages = ({ sortPage }: Props) => {
     const [valueSearch, setValueSearch] = useState<string>('')
     const dispatch = useAppDispatch()
     const onChangeInputField = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,7 +22,12 @@ const SearchSortPostsOnPages = (props: Props) => {
             <button
                 style={{ width: '85px', fontWeight: 'bold', fontSize: '17px' }}
                 onClick={() =>
-                    dispatch(handleSearchFilter({ title: valueSearch }))
+                    dispatch(
+                        handleSearchFilter({
+                            title: valueSearch,
+                            sortPage,
+                        })
+                    )
                 }
                 className="search-btn"
             >
