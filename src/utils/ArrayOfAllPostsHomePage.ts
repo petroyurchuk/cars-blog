@@ -281,6 +281,24 @@ const ArrayOfAllPostsHomePage: Props[] = [
         date: 'December 28, 2015',
         description: defaultDescription,
     },
+    {
+        id: 31,
+        image: '/images/Products/All-Posts/all-posts-31.jpg',
+        category: 'auto shows',
+        title: 'Mercedes-Benz Plans GLE Hybrid to Debut in New York',
+        author: 'Alex Reeve',
+        date: 'December 28, 2015',
+        description: defaultDescription,
+    },
+    {
+        id: 32,
+        image: '/images/Products/All-Posts/all-posts-32.jpg',
+        category: 'auto shows',
+        title: 'Two New Scion Models Confirmed for the New York Auto Show',
+        author: 'Alex Reeve',
+        date: 'December 28, 2015',
+        description: defaultDescription,
+    },
 ]
 
 export default ArrayOfAllPostsHomePage

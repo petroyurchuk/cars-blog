@@ -22,6 +22,8 @@ interface PostsState {
     postsLife: PropsPosts[]
     filteredTuningPosts: PropsPosts[]
     postsTuning: PropsPosts[]
+    postsAutoShows: PropsPosts[]
+    filteredAutoShowsPosts: PropsPosts[]
 }
 const initialState: PostsState = {
     posts: postsArray,
@@ -36,6 +38,12 @@ const initialState: PostsState = {
     postsLife: postsLifeArray,
     filteredTuningPosts: postsTuningArray,
     postsTuning: postsTuningArray,
+    postsAutoShows: postsArray.filter(
+        ({ category }) => category.toLowerCase() === 'auto shows'
+    ),
+    filteredAutoShowsPosts: postsArray.filter(
+        ({ category }) => category.toLowerCase() === 'auto shows'
+    ),
 }
 
 export const postsSlice = createSlice({
@@ -47,7 +55,7 @@ export const postsSlice = createSlice({
             const postsToFilter = state[`${nameOfPosts}` as keyof PostsState]
             const filteredPostsKey =
                 `${nameOfFilteredPosts}` as keyof PostsState
-            console.log(postsToFilter + '\n' + filteredPostsKey)
+
             state[filteredPostsKey] = postsToFilter.filter(
                 ({ title: postTitle }) =>
                     postTitle.toLowerCase().includes(title.toLowerCase())
