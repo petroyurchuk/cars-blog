@@ -51,7 +51,7 @@ export const postsSlice = createSlice({
                 )
             }
             if (action.payload.sortPage === 'dealsPage') {
-                state.filteredTestsPosts = state.postsTests.filter(
+                state.filteredDealsPosts = state.postsDeals.filter(
                     ({ title }) =>
                         title.toLowerCase().includes(action.payload.title)
                 )
