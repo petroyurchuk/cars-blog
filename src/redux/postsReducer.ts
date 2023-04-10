@@ -26,6 +26,8 @@ interface PostsState {
     postsAutoShows: PropsPosts[]
     filteredFirstContactPosts: PropsPosts[]
     postsFirstContact: PropsPosts[]
+    filteredHiTechPosts: PropsPosts[]
+    postsHiTech: PropsPosts[]
 }
 const initialState: PostsState = {
     posts: postsArray,
@@ -51,6 +53,12 @@ const initialState: PostsState = {
     ),
     postsFirstContact: postsArray.filter(
         ({ category }) => category.toLowerCase() === 'first contact'
+    ),
+    filteredHiTechPosts: postsArray.filter(
+        ({ category }) => category.toLowerCase() === 'hi-tech'
+    ),
+    postsHiTech: postsArray.filter(
+        ({ category }) => category.toLowerCase() === 'hi-tech'
     ),
 }
 

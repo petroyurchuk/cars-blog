@@ -15,6 +15,7 @@ import Life from 'pages/Life/Life'
 import Tuning from 'pages/Tuning/Tuning'
 import AutoShows from 'pages/AutoShows/AutoShows'
 import FirstContact from 'pages/FirstContact/FirstContact'
+import HiTech from 'pages/HiTech/HiTech'
 
 type Props = {}
 const App = (props: Props) => {
@@ -40,6 +41,7 @@ const App = (props: Props) => {
                             path="/cars/first-contact"
                             element={<FirstContact />}
                         />
+                        <Route path="/cars/hi-tech" element={<HiTech />} />
                     </Routes>
                 </div>
                 <Footer />
