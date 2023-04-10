@@ -18,6 +18,7 @@ import FirstContact from 'pages/FirstContact/FirstContact'
 import HiTech from 'pages/HiTech/HiTech'
 import MotorSports from 'pages/MotorSports/MotorSports'
 import NewGenerations from 'pages/NewGenerations/NewGenerations'
+import Oldies from 'pages/Oldies/Oldies'
 
 type Props = {}
 const App = (props: Props) => {
@@ -52,6 +53,7 @@ const App = (props: Props) => {
                             path="/cars/new-generations"
                             element={<NewGenerations />}
                         />
+                        <Route path="/cars/oldies" element={<Oldies />} />
                     </Routes>
                 </div>
                 <Footer />

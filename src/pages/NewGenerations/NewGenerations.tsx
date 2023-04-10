@@ -8,7 +8,7 @@ import { useAppSelector } from 'redux/hooks'
 import SocialList from 'components/Social/SocialList'
 import { socialListArray } from 'utils/socialListArray'
 import Sidebar from 'components/SideBar/Sidebar'
-import ArrayOfAllPostsHomePage from 'utils/ArrayOfAllPostsHomePage'
+import { NewGenerationsData } from 'utils/ProductPostsData'
 
 type Props = {}
 const NewGenerations = (props: Props) => {
@@ -20,7 +20,7 @@ const NewGenerations = (props: Props) => {
         <div className="cars-page__container">
             <Title>New Generations</Title>
             <Preview
-                dataPosts={ArrayOfAllPostsHomePage}
+                dataPosts={NewGenerationsData}
                 categoryForSort="new generations"
             />
             <div className="cars-page-main-content-wrapper">

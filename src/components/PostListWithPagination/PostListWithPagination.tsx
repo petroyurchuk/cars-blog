@@ -52,23 +52,27 @@ const PostListWithPagination = ({
             ) : (
                 <PostsList posts={selectedPosts} />
             )}
-            <div className="wrapper-pagination">
-                <Pagination
-                    count={totalPages}
-                    page={currentPage}
-                    boundaryCount={2}
-                    siblingCount={1}
-                    onChange={handlePageChange}
-                    showFirstButton
-                    showLastButton
-                    shape="rounded"
-                    size="medium"
-                />
-                <div className="info-about-pages">
-                    Page {currentPage} of{' '}
-                    {Math.ceil(posts.length / postsPerPage + numberForPlus)}
+            {Math.ceil(posts.length / postsPerPage + numberForPlus) > 1 ? (
+                <div className="wrapper-pagination">
+                    <Pagination
+                        count={totalPages}
+                        page={currentPage}
+                        boundaryCount={2}
+                        siblingCount={1}
+                        onChange={handlePageChange}
+                        showFirstButton
+                        showLastButton
+                        shape="rounded"
+                        size="medium"
+                    />
+                    <div className="info-about-pages">
+                        Page {currentPage} of{' '}
+                        {Math.ceil(posts.length / postsPerPage + numberForPlus)}
+                    </div>
                 </div>
-            </div>
+            ) : (
+                <div></div>
+            )}
         </div>
     )
 }

@@ -302,8 +302,8 @@ const ArrayOfAllPostsHomePage: Props[] = [
     {
         id: 33,
         image: '/images/Products/All-Posts/all-posts-33.jpg',
-        category: 'first contact',
-        title: 'Buick Enclave Tuscan Edition',
+        category: 'oldies',
+        title: 'Monterey Auctions See $393 M in Sales',
         author: 'Alex Reeve',
         date: 'December 28, 2015',
         description: defaultDescription,
@@ -311,8 +311,8 @@ const ArrayOfAllPostsHomePage: Props[] = [
     {
         id: 34,
         image: '/images/Products/All-Posts/all-posts-34.jpg',
-        category: 'first contact',
-        title: '2016 Hyundai Sonata Hybrid',
+        category: 'oldies',
+        title: 'What Next for the Barn Finds?',
         author: 'Alex Reeve',
         date: 'December 28, 2015',
         description: defaultDescription,

@@ -280,6 +280,33 @@ export const postsArray: PropsPosts[] = [
         description: defaultDescription,
         image: '/images/Posts/Cars-page/cars-page-30.jpg',
     },
+    {
+        id: 31,
+        title: '2016 Mercedes CLS Coupe',
+        category: 'new generations',
+        author: 'Alex Reeve',
+        date: 'December 28, 2015',
+        description: defaultDescription,
+        image: '/images/Posts/Cars-page/cars-page-31.jpg',
+    },
+    {
+        id: 32,
+        title: '2016 Camaro Starts at $26.695',
+        category: 'new generations',
+        author: 'Alex Reeve',
+        date: 'December 28, 2015',
+        description: defaultDescription,
+        image: '/images/Posts/Cars-page/cars-page-32.jpg',
+    },
+    {
+        id: 33,
+        title: 'Ford GT Spotted on Detroit Highway',
+        category: 'new generations',
+        author: 'Alex Reeve',
+        date: 'December 28, 2015',
+        description: defaultDescription,
+        image: '/images/Posts/Cars-page/cars-page-33.jpg',
+    },
 ]
 export const postsReviewsArray: PropsPosts[] = [
     {

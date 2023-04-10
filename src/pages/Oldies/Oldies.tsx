@@ -1,25 +1,27 @@
 import Preview from 'components/Preview/Preview'
 import Title from 'components/Title/Title'
+
 import PostListWithPagination from 'components/PostListWithPagination/PostListWithPagination'
+
 import SearchSortPostsOnPages from 'components/SearchSortPostsOnPages/SearchSortPostsOnPages'
 import { useAppSelector } from 'redux/hooks'
 import SocialList from 'components/Social/SocialList'
 import { socialListArray } from 'utils/socialListArray'
 import Sidebar from 'components/SideBar/Sidebar'
-import { FirstContactData } from 'utils/ProductPostsData'
+import ArrayOfAllPostsHomePage from 'utils/ArrayOfAllPostsHomePage'
 
 type Props = {}
-const FirstContact = (props: Props) => {
+const Oldies = (props: Props) => {
     const postsArray = useAppSelector(
-        (state) => state.posts.filteredFirstContactPosts
+        (state) => state.posts.filteredOldiesPosts
     )
 
     return (
         <div className="cars-page__container">
-            <Title>First Contact</Title>
+            <Title>Oldies</Title>
             <Preview
-                dataPosts={FirstContactData}
-                categoryForSort="first contact"
+                dataPosts={ArrayOfAllPostsHomePage}
+                categoryForSort="oldies"
             />
             <div className="cars-page-main-content-wrapper">
                 <PostListWithPagination
@@ -30,8 +32,8 @@ const FirstContact = (props: Props) => {
                 />
                 <div className="wrapper-right-side">
                     <SearchSortPostsOnPages
-                        nameOfPosts="postsFirstContact"
-                        nameOfFilteredPosts="filteredFirstContactPosts"
+                        nameOfPosts="postsOldies"
+                        nameOfFilteredPosts="filteredOldiesPosts"
                     />
                     <SocialList socialListData={socialListArray} />
                     <Sidebar />
@@ -40,4 +42,4 @@ const FirstContact = (props: Props) => {
         </div>
     )
 }
-export default FirstContact
+export default Oldies
