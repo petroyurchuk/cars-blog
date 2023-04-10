@@ -11,7 +11,7 @@ import Sidebar from 'components/SideBar/Sidebar'
 import latestArticlesDataProduct from 'utils/ProductPostsData'
 
 type Props = {}
-const Tests = (props: Props) => {
+const Deals = (props: Props) => {
     const postsArray = useAppSelector((state) => state.posts.filteredDealsPosts)
 
     return (
@@ -29,7 +29,10 @@ const Tests = (props: Props) => {
                     numberForMinus={1}
                 />
                 <div className="wrapper-right-side">
-                    <SearchSortPostsOnPages sortPage="dealsPage" />
+                    <SearchSortPostsOnPages
+                        nameOfPosts="postsDeals"
+                        nameOfFilteredPosts="filteredDealsPosts"
+                    />
                     <SocialList socialListData={socialListArray} />
                     <Sidebar />
                 </div>
@@ -37,4 +40,4 @@ const Tests = (props: Props) => {
         </div>
     )
 }
-export default Tests
+export default Deals

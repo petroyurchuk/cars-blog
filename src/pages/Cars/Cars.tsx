@@ -29,7 +29,10 @@ const Cars = (props: Props) => {
                     numberForMinus={1}
                 />
                 <div className="wrapper-right-side">
-                    <SearchSortPostsOnPages sortPage="carsPage" />
+                    <SearchSortPostsOnPages
+                        nameOfPosts="posts"
+                        nameOfFilteredPosts="filteredPosts"
+                    />
                     <SocialList socialListData={socialListArray} />
                     <Sidebar />
                 </div>

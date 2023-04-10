@@ -3,9 +3,13 @@ import { useAppDispatch } from 'redux/hooks'
 import { handleSearchFilter } from 'redux/postsReducer'
 
 type Props = {
-    sortPage: string
+    nameOfPosts: string
+    nameOfFilteredPosts: string
 }
-const SearchSortPostsOnPages = ({ sortPage }: Props) => {
+const SearchSortPostsOnPages = ({
+    nameOfPosts,
+    nameOfFilteredPosts,
+}: Props) => {
     const [valueSearch, setValueSearch] = useState<string>('')
     const dispatch = useAppDispatch()
     const onChangeInputField = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,7 +29,8 @@ const SearchSortPostsOnPages = ({ sortPage }: Props) => {
                     dispatch(
                         handleSearchFilter({
                             title: valueSearch,
-                            sortPage,
+                            nameOfPosts,
+                            nameOfFilteredPosts,
                         })
                     )
                 }

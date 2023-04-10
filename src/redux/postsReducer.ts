@@ -6,9 +6,9 @@ import {
     postsTestsArray,
     postsDealsArray,
     PropsPosts,
+    postsLifeArray,
 } from 'utils/postsArray'
-
-const initialState: {
+interface PostsState {
     posts: PropsPosts[]
     filteredPosts: PropsPosts[]
     postsReviews: PropsPosts[]
@@ -17,7 +17,10 @@ const initialState: {
     postsTests: PropsPosts[]
     filteredDealsPosts: PropsPosts[]
     postsDeals: PropsPosts[]
-} = {
+    filteredLifePosts: PropsPosts[]
+    postsLife: PropsPosts[]
+}
+const initialState: PostsState = {
     posts: postsArray,
     filteredPosts: postsArray,
     postsReviews: postsReviewsArray,
@@ -26,6 +29,8 @@ const initialState: {
     postsTests: postsTestsArray,
     filteredDealsPosts: postsDealsArray,
     postsDeals: postsDealsArray,
+    filteredLifePosts: postsLifeArray,
+    postsLife: postsLifeArray,
 }
 
 export const postsSlice = createSlice({
@@ -33,29 +38,15 @@ export const postsSlice = createSlice({
     initialState,
     reducers: {
         handleSearchFilter: (state, action) => {
-            if (action.payload.sortPage === 'carsPage') {
-                state.filteredPosts = state.posts.filter(({ title }) =>
-                    title.toLowerCase().includes(action.payload.title)
-                )
-            }
-            if (action.payload.sortPage === 'reviewsPage') {
-                state.filteredReviewsPosts = state.postsReviews.filter(
-                    ({ title }) =>
-                        title.toLowerCase().includes(action.payload.title)
-                )
-            }
-            if (action.payload.sortPage === 'testsPage') {
-                state.filteredTestsPosts = state.postsTests.filter(
-                    ({ title }) =>
-                        title.toLowerCase().includes(action.payload.title)
-                )
-            }
-            if (action.payload.sortPage === 'dealsPage') {
-                state.filteredDealsPosts = state.postsDeals.filter(
-                    ({ title }) =>
-                        title.toLowerCase().includes(action.payload.title)
-                )
-            }
+            const { nameOfPosts, nameOfFilteredPosts, title } = action.payload
+            const postsToFilter = state[`${nameOfPosts}` as keyof PostsState]
+            const filteredPostsKey =
+                `${nameOfFilteredPosts}` as keyof PostsState
+            console.log(postsToFilter + '\n' + filteredPostsKey)
+            state[filteredPostsKey] = postsToFilter.filter(
+                ({ title: postTitle }) =>
+                    postTitle.toLowerCase().includes(title.toLowerCase())
+            )
         },
     },
 })

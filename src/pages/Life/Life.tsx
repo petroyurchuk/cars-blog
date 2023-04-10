@@ -11,17 +11,15 @@ import Sidebar from 'components/SideBar/Sidebar'
 import ArrayOfAllPostsHomePage from 'utils/ArrayOfAllPostsHomePage'
 
 type Props = {}
-const Reviews = (props: Props) => {
-    const postsArray = useAppSelector(
-        (state) => state.posts.filteredReviewsPosts
-    )
+const Life = (props: Props) => {
+    const postsArray = useAppSelector((state) => state.posts.filteredLifePosts)
 
     return (
         <div className="cars-page__container">
-            <Title>Reviews</Title>
+            <Title>Life</Title>
             <Preview
                 dataPosts={ArrayOfAllPostsHomePage}
-                categoryForSort="reviews"
+                categoryForSort="life"
             />
             <div className="cars-page-main-content-wrapper">
                 <PostListWithPagination
@@ -32,8 +30,8 @@ const Reviews = (props: Props) => {
                 />
                 <div className="wrapper-right-side">
                     <SearchSortPostsOnPages
-                        nameOfPosts="postsReviews"
-                        nameOfFilteredPosts="filteredReviewsPosts"
+                        nameOfPosts="postsLife"
+                        nameOfFilteredPosts="filteredLifePosts"
                     />
                     <SocialList socialListData={socialListArray} />
                     <Sidebar />
@@ -42,4 +40,4 @@ const Reviews = (props: Props) => {
         </div>
     )
 }
-export default Reviews
+export default Life

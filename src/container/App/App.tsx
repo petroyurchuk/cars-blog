@@ -11,6 +11,7 @@ import './App.scss'
 import { Container } from '@mui/system'
 import Tests from 'pages/Tests/Tests'
 import Deals from 'pages/Deals/Deals'
+import Life from 'pages/Life/Life'
 
 type Props = {}
 const App = (props: Props) => {
@@ -26,6 +27,7 @@ const App = (props: Props) => {
                         <Route path="/reviews" element={<Reviews />} />
                         <Route path="/tests" element={<Tests />} />
                         <Route path="/more/deals" element={<Deals />} />
+                        <Route path="/more/life" element={<Life />} />
                     </Routes>
                 </div>
                 <Footer />
