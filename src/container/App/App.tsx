@@ -12,6 +12,7 @@ import { Container } from '@mui/system'
 import Tests from 'pages/Tests/Tests'
 import Deals from 'pages/Deals/Deals'
 import Life from 'pages/Life/Life'
+import Tuning from 'pages/Tuning/Tuning'
 
 type Props = {}
 const App = (props: Props) => {
@@ -28,6 +29,7 @@ const App = (props: Props) => {
                         <Route path="/tests" element={<Tests />} />
                         <Route path="/more/deals" element={<Deals />} />
                         <Route path="/more/life" element={<Life />} />
+                        <Route path="/more/tuning" element={<Tuning />} />
                     </Routes>
                 </div>
                 <Footer />

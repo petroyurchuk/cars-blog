@@ -7,6 +7,7 @@ import {
     postsDealsArray,
     PropsPosts,
     postsLifeArray,
+    postsTuningArray,
 } from 'utils/postsArray'
 interface PostsState {
     posts: PropsPosts[]
@@ -19,6 +20,8 @@ interface PostsState {
     postsDeals: PropsPosts[]
     filteredLifePosts: PropsPosts[]
     postsLife: PropsPosts[]
+    filteredTuningPosts: PropsPosts[]
+    postsTuning: PropsPosts[]
 }
 const initialState: PostsState = {
     posts: postsArray,
@@ -31,6 +34,8 @@ const initialState: PostsState = {
     postsDeals: postsDealsArray,
     filteredLifePosts: postsLifeArray,
     postsLife: postsLifeArray,
+    filteredTuningPosts: postsTuningArray,
+    postsTuning: postsTuningArray,
 }
 
 export const postsSlice = createSlice({

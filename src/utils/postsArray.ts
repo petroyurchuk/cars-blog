@@ -379,3 +379,41 @@ export const postsLifeArray: PropsPosts[] = [
         image: '/images/Posts/Life-page/life-page-05.jpg',
     },
 ]
+export const postsTuningArray: PropsPosts[] = [
+    {
+        id: 1,
+        category: 'tuning',
+        title: 'There’s Nothing Funny About Toyota’s Fuel Leaks',
+        author: 'Alex Reeve',
+        date: 'December 28, 2015',
+        description: defaultDescription,
+        image: '/images/Posts/Tuning-page/tuning-page-01.jpg',
+    },
+    {
+        id: 2,
+        category: 'tuning',
+        title: 'Hackers Seize Control of a Tesla Model S',
+        author: 'Alex Reeve',
+        date: 'December 28, 2015',
+        description: defaultDescription,
+        image: '/images/Posts/Tuning-page/tuning-page-02.jpg',
+    },
+    {
+        id: 3,
+        category: 'tuning',
+        title: 'Modify Your New Mercedes-Benz C-Class',
+        author: 'Alex Reeve',
+        date: 'December 28, 2015',
+        description: defaultDescription,
+        image: '/images/Posts/Tuning-page/tuning-page-03.jpg',
+    },
+    {
+        id: 4,
+        category: 'tuning',
+        title: 'Volvo 142 Drift Car Project Hits Swedish Street',
+        author: 'Alex Reeve',
+        date: 'December 28, 2015',
+        description: defaultDescription,
+        image: '/images/Posts/Tuning-page/tuning-page-04.jpg',
+    },
+]
