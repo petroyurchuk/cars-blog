@@ -18,13 +18,21 @@ const ArrayOfNamesOfSubMenu: PropsArray[] = [
             'Oldies',
         ],
         className: 'sub-menu sub-menu__cars',
-        linksNames: ['/cars/all', '/cars/auto-shows'],
+        linksNames: [
+            '/cars/',
+            '/cars/auto-shows',
+            '/cars/first-contact',
+            '/cars/hi-tech',
+            '/cars/motor-sports',
+            '/cars/new-generations',
+            '/cars/oldies',
+        ],
     },
     {
         index: 5,
         namesOfList: ['Deals', 'Life', 'Tuning'],
         className: 'sub-menu sub-menu__more',
-        linksNames: ['/more/deals'],
+        linksNames: ['/more/deals', '/more/life', '/more/tuning'],
     },
 ]
 

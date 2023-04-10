@@ -3,6 +3,7 @@ import MenuInSubMenu from 'components/MenuInSubMenu/MenuInSubMenu'
 import ShowAllSubMenu from 'components/ShowAllSubMenu/ShowAllSubMenu'
 import { useRef, useState } from 'react'
 import './SubMenu.scss'
+import { NavLink } from 'react-router-dom'
 
 type PropsList = {
     index: number
@@ -43,7 +44,7 @@ const SubMenu = ({ index }: PropsList) => {
         return null
     }
 
-    const { namesOfList, className } = filteredList
+    const { namesOfList, className, linksNames } = filteredList
 
     return (
         <ul className={className} onMouseLeave={() => setHoveredItem(false)}>
@@ -58,9 +59,12 @@ const SubMenu = ({ index }: PropsList) => {
                         className="sub-menu__item"
                         onMouseEnter={() => handlerEnter(idx)}
                     >
-                        <a href="/" className="sub-menu__link">
+                        <NavLink
+                            to={linksNames[idx]}
+                            className="sub-menu__link"
+                        >
                             {name}
-                        </a>
+                        </NavLink>
                     </li>
                 )
             })}

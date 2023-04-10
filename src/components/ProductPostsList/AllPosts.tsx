@@ -9,7 +9,7 @@ type Props = {
     category: string
     title: string
     author: string
-    data: string
+    date: string
     description: string
 }
 
@@ -45,7 +45,7 @@ const AllPosts = ({ collectionOfData }: PropsAllPosts) => {
                                 category,
                                 title,
                                 author,
-                                data,
+                                date,
                                 description,
                             },
                             index
@@ -63,7 +63,7 @@ const AllPosts = ({ collectionOfData }: PropsAllPosts) => {
                                         category={category}
                                         title={title}
                                         author={author}
-                                        data={data}
+                                        data={date}
                                         description={description}
                                     />
                                 </MuiGrid>

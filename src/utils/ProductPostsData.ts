@@ -4,7 +4,7 @@ type Props = {
     category: string
     title: string
     author: string
-    data: string
+    date: string
     description: string
 }
 const defaultDescription =
@@ -16,7 +16,7 @@ const ProductPostsData: Props[] = [
         category: 'deals',
         title: '10 Best Car Deals of the Month in January',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -25,7 +25,7 @@ const ProductPostsData: Props[] = [
         category: 'New Generations',
         title: 'Lamborghini Aventador Will Blow Your Mind',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -34,7 +34,7 @@ const ProductPostsData: Props[] = [
         category: 'deals',
         title: 'Tesla Reportedly Loses $4,000 on Each Model S',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -43,7 +43,7 @@ const ProductPostsData: Props[] = [
         category: 'hi-tech',
         title: '400-hp BMW Diesel Just Around the Corner',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -52,7 +52,7 @@ const ProductPostsData: Props[] = [
         category: 'tests',
         title: '2016 Porsche Boxster Spyder: We’re Stoked!',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -61,7 +61,7 @@ const ProductPostsData: Props[] = [
         category: 'deals',
         title: 'Out-of-This-World Mansory Lamborghini Aventador',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -70,7 +70,7 @@ const ProductPostsData: Props[] = [
         category: 'deals',
         title: 'Out-of-This-World Mansory Lamborghini Aventador',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
 ]
@@ -82,7 +82,7 @@ export const NewGenerationsData: Props[] = [
         category: 'new generations',
         title: 'Lamborghini Aventador Will Blow Your Mind',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -91,7 +91,7 @@ export const NewGenerationsData: Props[] = [
         category: 'Auto shows',
         title: 'Ford GT Spotted on Detroit Highway',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -100,7 +100,7 @@ export const NewGenerationsData: Props[] = [
         category: 'new generations',
         title: '2016 Mercedes CLS Coupe',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -109,7 +109,7 @@ export const NewGenerationsData: Props[] = [
         category: 'new generations',
         title: '2016 Camaro Starts at $26.695',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -118,7 +118,7 @@ export const NewGenerationsData: Props[] = [
         category: 'life',
         title: 'Dodge Unveils 2015 Charger Pursuit',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -127,7 +127,7 @@ export const NewGenerationsData: Props[] = [
         category: 'new generations',
         title: '2017 Mercedes-AMG C63 Coupe Revealed',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
 ]
@@ -138,7 +138,7 @@ export const FirstContactData: Props[] = [
         category: 'new generations',
         title: 'Ford GT Spotted on Detroit Highway',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -147,7 +147,7 @@ export const FirstContactData: Props[] = [
         category: 'first contact',
         title: '2016 Hyundai Sonata Hybrid',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -156,7 +156,7 @@ export const FirstContactData: Props[] = [
         category: 'first contact',
         title: 'Tesla Model S Convertible',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -165,7 +165,7 @@ export const FirstContactData: Props[] = [
         category: 'first contact',
         title: '2016 Lincoln MKX',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -174,7 +174,7 @@ export const FirstContactData: Props[] = [
         category: 'first contact',
         title: 'Buick Enclave Tuscan Edition',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -183,7 +183,7 @@ export const FirstContactData: Props[] = [
         category: 'first contact',
         title: 'Land Rover Discovery Sport',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -192,7 +192,7 @@ export const FirstContactData: Props[] = [
         category: 'first contact',
         title: 'Roush Stage 3 Mustang',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
 ]
@@ -203,7 +203,7 @@ export const HiTechData: Props[] = [
         category: 'hi-tech',
         title: '400-hp BMW Diesel Just Around the Corner',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -212,7 +212,7 @@ export const HiTechData: Props[] = [
         category: 'auto shows',
         title: 'Ford GT Spotted on Detroit Highway',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -221,7 +221,7 @@ export const HiTechData: Props[] = [
         category: 'hi-tech',
         title: 'The Corvette Hoverboard is Here and it’s Real',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -230,7 +230,7 @@ export const HiTechData: Props[] = [
         category: 'hi-tech',
         title: '605 HP Audi S8 Plus Dials the Power',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -239,7 +239,7 @@ export const HiTechData: Props[] = [
         category: 'hi-tech',
         title: 'Volkswagen e-Golf SEL Premium',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -248,7 +248,7 @@ export const HiTechData: Props[] = [
         category: 'hi-tech',
         title: 'Land Rover Recreates 1948 Production Line',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -257,7 +257,7 @@ export const HiTechData: Props[] = [
         category: 'hi-tech',
         title: 'The Bloodhound Supersonic Car',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
 ]
@@ -269,7 +269,7 @@ export const latestArticlesDataProduct: Props[] = [
         category: 'deals',
         title: 'BFGoodrich Unveils Supersport G-Force Tires',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -278,7 +278,7 @@ export const latestArticlesDataProduct: Props[] = [
         category: 'deals',
         title: 'New Car Financing and Cash Offers for Youngsters',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -287,7 +287,7 @@ export const latestArticlesDataProduct: Props[] = [
         category: 'deals',
         title: '10 Best Car Deals of the Month in January',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -296,7 +296,7 @@ export const latestArticlesDataProduct: Props[] = [
         category: 'deals',
         title: 'Out-of-This-World Mansory Lamborghini Aventador',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
     {
@@ -305,7 +305,7 @@ export const latestArticlesDataProduct: Props[] = [
         category: 'deals',
         title: 'Tesla Reportedly Loses $4,000 on Each Model S',
         author: 'Alex Reeve',
-        data: 'December 28, 2015',
+        date: 'December 28, 2015',
         description: defaultDescription,
     },
 ]

@@ -8,18 +8,18 @@ import { useAppSelector } from 'redux/hooks'
 import SocialList from 'components/Social/SocialList'
 import { socialListArray } from 'utils/socialListArray'
 import Sidebar from 'components/SideBar/Sidebar'
-import ArrayOfAllPostsHomePage from 'utils/ArrayOfAllPostsHomePage'
+import latestArticlesDataProduct from 'utils/ProductPostsData'
 
 type Props = {}
 const Tests = (props: Props) => {
-    const postsArray = useAppSelector((state) => state.posts.filteredTestsPosts)
+    const postsArray = useAppSelector((state) => state.posts.filteredDealsPosts)
 
     return (
         <div className="cars-page__container">
-            <Title>Tests</Title>
+            <Title>Deals</Title>
             <Preview
-                dataPosts={ArrayOfAllPostsHomePage}
-                categoryForSort="tests"
+                dataPosts={latestArticlesDataProduct}
+                categoryForSort="deals"
             />
             <div className="cars-page-main-content-wrapper">
                 <PostListWithPagination

@@ -18,7 +18,7 @@ const LatestArticles = (props: Props) => {
                         category,
                         title,
                         author,
-                        data,
+                        date,
                         description,
                     }) => (
                         <Grid item key={id} className="product-post__container">
@@ -27,7 +27,7 @@ const LatestArticles = (props: Props) => {
                                 category={category}
                                 title={title}
                                 author={author}
-                                data={data}
+                                data={date}
                                 description={description}
                             />
                         </Grid>
