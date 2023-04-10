@@ -28,6 +28,8 @@ interface PostsState {
     postsFirstContact: PropsPosts[]
     filteredHiTechPosts: PropsPosts[]
     postsHiTech: PropsPosts[]
+    filteredMotorSportsPosts: PropsPosts[]
+    postsMotorSports: PropsPosts[]
 }
 const initialState: PostsState = {
     posts: postsArray,
@@ -59,6 +61,12 @@ const initialState: PostsState = {
     ),
     postsHiTech: postsArray.filter(
         ({ category }) => category.toLowerCase() === 'hi-tech'
+    ),
+    filteredMotorSportsPosts: postsArray.filter(
+        ({ category }) => category.toLowerCase() === 'motorsports'
+    ),
+    postsMotorSports: postsArray.filter(
+        ({ category }) => category.toLowerCase() === 'motorsports'
     ),
 }
 
