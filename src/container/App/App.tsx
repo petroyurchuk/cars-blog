@@ -14,6 +14,7 @@ import Deals from 'pages/Deals/Deals'
 import Life from 'pages/Life/Life'
 import Tuning from 'pages/Tuning/Tuning'
 import AutoShows from 'pages/AutoShows/AutoShows'
+import FirstContact from 'pages/FirstContact/FirstContact'
 
 type Props = {}
 const App = (props: Props) => {
@@ -34,6 +35,10 @@ const App = (props: Props) => {
                         <Route
                             path="/cars/auto-shows"
                             element={<AutoShows />}
+                        />
+                        <Route
+                            path="/cars/first-contact"
+                            element={<FirstContact />}
                         />
                     </Routes>
                 </div>

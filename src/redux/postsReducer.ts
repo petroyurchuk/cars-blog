@@ -22,8 +22,10 @@ interface PostsState {
     postsLife: PropsPosts[]
     filteredTuningPosts: PropsPosts[]
     postsTuning: PropsPosts[]
-    postsAutoShows: PropsPosts[]
     filteredAutoShowsPosts: PropsPosts[]
+    postsAutoShows: PropsPosts[]
+    filteredFirstContactPosts: PropsPosts[]
+    postsFirstContact: PropsPosts[]
 }
 const initialState: PostsState = {
     posts: postsArray,
@@ -38,11 +40,17 @@ const initialState: PostsState = {
     postsLife: postsLifeArray,
     filteredTuningPosts: postsTuningArray,
     postsTuning: postsTuningArray,
+    filteredAutoShowsPosts: postsArray.filter(
+        ({ category }) => category.toLowerCase() === 'auto shows'
+    ),
     postsAutoShows: postsArray.filter(
         ({ category }) => category.toLowerCase() === 'auto shows'
     ),
-    filteredAutoShowsPosts: postsArray.filter(
-        ({ category }) => category.toLowerCase() === 'auto shows'
+    filteredFirstContactPosts: postsArray.filter(
+        ({ category }) => category.toLowerCase() === 'first contact'
+    ),
+    postsFirstContact: postsArray.filter(
+        ({ category }) => category.toLowerCase() === 'first contact'
     ),
 }
 
