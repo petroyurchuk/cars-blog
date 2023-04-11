@@ -43,6 +43,7 @@ const ProductPostsListTab = ({ arrayOfData }: PropsListTab) => {
                                     className="product-post__container"
                                 >
                                     <ProductPostsListItem
+                                        id={id}
                                         image={image}
                                         category={category}
                                         title={title}

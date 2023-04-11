@@ -1,6 +1,11 @@
-import { Card, CardContent } from '@mui/material'
+import { Card, CardContent, Button } from '@mui/material'
 import './ProductPostsList.scss'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { toggleLike } from 'redux/likeReducer'
 type Props = {
+    id: number
     image: string
     category: string
     title: string
@@ -9,6 +14,7 @@ type Props = {
     description: string
 }
 const PopularPostsListItem = ({
+    id,
     image,
     category,
     title,
@@ -16,6 +22,8 @@ const PopularPostsListItem = ({
     data,
     description,
 }: Props) => {
+    const isLiked = useAppSelector((state) => state.like[id])
+    const dispatch = useAppDispatch()
     return (
         <div className="list-item__container list-item">
             <Card className="list-item__card">
@@ -37,8 +45,27 @@ const PopularPostsListItem = ({
                             </a>
                         </h3>
                         <div className="list-item__info-about-post-wrapper">
-                            <span className="list-item__author">{author}</span>
-                            <span className="list-item__data"> - {data}</span>
+                            <div>
+                                <span className="list-item__author">
+                                    {author}
+                                </span>
+                                <span className="list-item__data">
+                                    {' '}
+                                    - {data}
+                                </span>
+                            </div>
+
+                            <Button
+                                variant="outlined"
+                                onClick={() => dispatch(toggleLike(id))}
+                                className="like-btn"
+                            >
+                                {isLiked ? (
+                                    <FavoriteIcon className="field-like-icon" />
+                                ) : (
+                                    <FavoriteBorderIcon className="not-field-like-icon" />
+                                )}
+                            </Button>
                         </div>
                         <p className="list-item__description">{description}</p>
                         <a

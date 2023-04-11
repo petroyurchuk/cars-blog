@@ -1,6 +1,11 @@
 import './Posts.scss'
-
+import { Button } from '@mui/material'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import { useAppDispatch, useAppSelector } from 'redux/hooks'
+import { toggleLike } from 'redux/likeReducer'
 type Props = {
+    id: number
     title: string
     category: string
     author: string
@@ -9,6 +14,7 @@ type Props = {
     image: string
 }
 const PostsListItem = ({
+    id,
     title,
     category,
     author,
@@ -16,6 +22,8 @@ const PostsListItem = ({
     description,
     image,
 }: Props) => {
+    const isLiked = useAppSelector((state) => state.like[id])
+    const dispatch = useAppDispatch()
     return (
         <div className="post-wrapper item-post">
             <div className="item-post__image-wrapper">
@@ -27,8 +35,23 @@ const PostsListItem = ({
                     <a href="/" className="item-post__link-category">
                         {category}
                     </a>
-                    <span className="item-post__author">{author}</span>
-                    <span className="item-post__date">- {date}</span>
+                    <div className="list-item__info-about-post-wrapper">
+                        <div>
+                            <span className="item-post__author">{author}</span>
+                            <span className="item-post__date">- {date}</span>
+                        </div>
+                        <Button
+                            variant="outlined"
+                            onClick={() => dispatch(toggleLike(id))}
+                            className="like-btn"
+                        >
+                            {isLiked ? (
+                                <FavoriteIcon className="field-like-icon" />
+                            ) : (
+                                <FavoriteBorderIcon className="not-field-like-icon" />
+                            )}
+                        </Button>
+                    </div>
                 </div>
                 <div className="item-post__description">{description}</div>
                 <a

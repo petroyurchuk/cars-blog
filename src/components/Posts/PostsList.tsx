@@ -12,6 +12,7 @@ const PostsList = ({ posts }: Props) => {
                 ({ id, title, description, image, author, date, category }) => (
                     <PostsListItem
                         key={id}
+                        id={id}
                         image={image}
                         title={title}
                         description={description}

@@ -47,6 +47,7 @@ $secondary-color: #767676;
 
 .item-post__date {
     color: $secondary-color;
+    font-size: 11px;
 }
 .item-post__description {
     margin-top: 9px;
@@ -56,4 +57,7 @@ $secondary-color: #767676;
 }
 .item-post__link-read-more {
     font-size: 13px;
+}
+.item-post__author {
+    font-size: 11px;
 }

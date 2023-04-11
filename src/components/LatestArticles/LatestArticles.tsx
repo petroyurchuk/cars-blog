@@ -23,6 +23,7 @@ const LatestArticles = (props: Props) => {
                     }) => (
                         <Grid item key={id} className="product-post__container">
                             <ProductPostsListItem
+                                id={id}
                                 image={image}
                                 category={category}
                                 title={title}

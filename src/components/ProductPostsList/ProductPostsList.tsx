@@ -28,6 +28,7 @@ const ProductPostsList = ({ posts }: PropsProductPostsList) => {
                     }) => (
                         <Grid key={id} item className="product-post__container">
                             <ProductPostsListItem
+                                id={id}
                                 image={image}
                                 category={category}
                                 title={title}

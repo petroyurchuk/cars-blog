@@ -41,6 +41,7 @@ const AllPosts = ({ collectionOfData }: PropsAllPosts) => {
                     {ArrayOfAllArrays.map(
                         (
                             {
+                                id,
                                 image,
                                 category,
                                 title,
@@ -59,6 +60,7 @@ const AllPosts = ({ collectionOfData }: PropsAllPosts) => {
                                     className="product-post__container"
                                 >
                                     <ProductPostsListItem
+                                        id={id}
                                         image={image}
                                         category={category}
                                         title={title}
