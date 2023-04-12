@@ -114,3 +114,26 @@
 .list-item__card {
     box-shadow: none;
 }
+.list-item__info-about-post-wrapper {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.like-btn {
+    border-color: #111111;
+    background-color: #111111;
+    height: 30px;
+    min-width: 20px;
+    max-width: 30px;
+    &:hover {
+        border-color: #fff;
+        background-color: #f77b33;
+    }
+}
+.field-like-icon {
+    fill: #fff;
+}
+.not-field-like-icon {
+    fill: #fff;
+}

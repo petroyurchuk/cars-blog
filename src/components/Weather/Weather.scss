@@ -1,0 +1,117 @@
+.weather-top-info__title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+.weather-top-info__description {
+    font-size: 14px;
+    line-height: 1;
+    text-transform: capitalize;
+    opacity: 0.8;
+    margin: 0;
+}
+.weather-mid-info__wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        bottom: -10px;
+        height: 2px;
+        opacity: 0.2;
+        background-color: #4db2ec;
+        left: 0;
+    }
+}
+.weather-mid-info__image {
+    width: 100px;
+    height: 100px;
+}
+.weather-mid-info__temp-wrapper {
+    padding: 32px 16px;
+    display: flex;
+    cursor: pointer;
+}
+.weather-mid-info__temp {
+    font-size: 40px;
+    font-weight: 300;
+}
+.weather-mid-info__marking-wrapper {
+    position: relative;
+    width: 50px;
+}
+.weather-mid-info__circle {
+    font-size: 30px;
+    position: absolute;
+    opacity: 0.6;
+    top: 0px;
+    line-height: 1;
+    left: 0px;
+}
+.weather-mid-info__unit {
+    position: absolute;
+    font-size: 16px;
+    top: 8px;
+    opacity: 0.6;
+    line-height: 1;
+    left: 10px;
+}
+.weather-mid-info__max-min-temp-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: 30px;
+}
+.weather-mid-info__max-temp-icon,
+.weather-mid-info__min-temp-icon {
+    animation: rotate 5s infinite alternate;
+}
+.weather-mid-info__max-min-temp-icon-item-wrapper {
+    align-self: flex-end;
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 3px;
+}
+.weather-mid-info__max-min-temp__temp-number {
+    font-size: 12px;
+    opacity: 0.8;
+}
+.weather-mid-info__max-min-temp__circle {
+    position: absolute;
+    top: -2px;
+    right: -6px;
+    opacity: 0.8;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    100% {
+        transform: rotate(360deg) scale(0.6);
+    }
+}
+.weather-bottom-info__wrapper {
+    padding-top: 15px;
+}
+.weather-bottom-info {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+.weather-bottom-info__item {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+.weather-bottom-info__text {
+    font-size: 12px;
+    opacity: 0.8;
+}

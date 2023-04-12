@@ -9,7 +9,7 @@ type Props = {
     category: string
     title: string
     author: string
-    data: string
+    date: string
     description: string
 }
 type PropsListTab = {
@@ -34,7 +34,7 @@ const ProductPostsListTab = ({ arrayOfData }: PropsListTab) => {
                             category,
                             title,
                             author,
-                            data,
+                            date,
                             description,
                         }) => (
                             <SwiperSlide className="all-posts__slide" key={id}>
@@ -43,11 +43,12 @@ const ProductPostsListTab = ({ arrayOfData }: PropsListTab) => {
                                     className="product-post__container"
                                 >
                                     <ProductPostsListItem
+                                        id={id}
                                         image={image}
                                         category={category}
                                         title={title}
                                         author={author}
-                                        data={data}
+                                        date={date}
                                         description={description}
                                     />
                                 </MuiGrid>

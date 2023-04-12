@@ -2,12 +2,26 @@ import Footer from 'container/Footer/Footer'
 import Header from 'container/Header/Header'
 import Home from 'pages/Home/Home'
 import Cars from 'pages/Cars/Cars'
+import Reviews from 'pages/Reviews/Reviews'
 import CssBaseline from '@mui/material/CssBaseline'
 import { StyledEngineProvider } from '@mui/material/styles'
 import { Routes, Route } from 'react-router-dom'
 
 import './App.scss'
 import { Container } from '@mui/system'
+import Tests from 'pages/Tests/Tests'
+import Deals from 'pages/Deals/Deals'
+import Life from 'pages/Life/Life'
+import Tuning from 'pages/Tuning/Tuning'
+import AutoShows from 'pages/AutoShows/AutoShows'
+import FirstContact from 'pages/FirstContact/FirstContact'
+import HiTech from 'pages/HiTech/HiTech'
+import MotorSports from 'pages/MotorSports/MotorSports'
+import NewGenerations from 'pages/NewGenerations/NewGenerations'
+import Oldies from 'pages/Oldies/Oldies'
+import Favorites from 'pages/Favorites/Favorites'
+import PostPage from 'pages/Post/PostPage'
+
 type Props = {}
 const App = (props: Props) => {
     return (
@@ -19,6 +33,31 @@ const App = (props: Props) => {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/cars" element={<Cars />} />
+                        <Route path="/reviews" element={<Reviews />} />
+                        <Route path="/tests" element={<Tests />} />
+                        <Route path="/favorites" element={<Favorites />} />
+                        <Route path="/more/deals" element={<Deals />} />
+                        <Route path="/more/life" element={<Life />} />
+                        <Route path="/more/tuning" element={<Tuning />} />
+                        <Route
+                            path="/cars/auto-shows"
+                            element={<AutoShows />}
+                        />
+                        <Route
+                            path="/cars/first-contact"
+                            element={<FirstContact />}
+                        />
+                        <Route path="/cars/hi-tech" element={<HiTech />} />
+                        <Route
+                            path="/cars/motor-sports"
+                            element={<MotorSports />}
+                        />
+                        <Route
+                            path="/cars/new-generations"
+                            element={<NewGenerations />}
+                        />
+                        <Route path="/cars/oldies" element={<Oldies />} />
+                        <Route path="/posts/:id" element={<PostPage />} />
                     </Routes>
                 </div>
                 <Footer />

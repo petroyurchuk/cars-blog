@@ -9,7 +9,7 @@ type Props = {
     category: string
     title: string
     author: string
-    data: string
+    date: string
     description: string
 }
 
@@ -41,11 +41,12 @@ const AllPosts = ({ collectionOfData }: PropsAllPosts) => {
                     {ArrayOfAllArrays.map(
                         (
                             {
+                                id,
                                 image,
                                 category,
                                 title,
                                 author,
-                                data,
+                                date,
                                 description,
                             },
                             index
@@ -59,11 +60,12 @@ const AllPosts = ({ collectionOfData }: PropsAllPosts) => {
                                     className="product-post__container"
                                 >
                                     <ProductPostsListItem
+                                        id={id}
                                         image={image}
                                         category={category}
                                         title={title}
                                         author={author}
-                                        data={data}
+                                        date={date}
                                         description={description}
                                     />
                                 </MuiGrid>

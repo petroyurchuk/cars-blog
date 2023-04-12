@@ -24,21 +24,28 @@ const Weather = (props: Props) => {
     }
 
     useEffect(() => {
-        fetch(
-            'https://api.openweathermap.org/data/2.5/weather?q=IVANO-FRANKIVSK&units=metric&APPID=5d066958a60d315387d9492393935c19'
-        )
-            .then((resolve) => resolve.json())
-            .then((data) => {
-                const icon = data.weather[0].icon
-                const iconSrc = `https://openweathermap.org/img/w/${icon}.png`
-                setIconSrc(iconSrc)
-                const temp = data.main.temp
-                setTemp(temp)
-                setMajorTemp(temp)
-                const tempFaringeint = temp * 1.8 + 32
-                setTempFaringeint(tempFaringeint)
-                setCity(data.name)
-            })
+        const fetchDataWeather = async () => {
+            try {
+                await fetch(
+                    'https://api.openweathermap.org/data/2.5/weather?q=IVANO-FRANKIVSK&units=metric&APPID=5d066958a60d315387d9492393935c19'
+                )
+                    .then((resolve) => resolve.json())
+                    .then((data) => {
+                        const icon = data.weather[0].icon
+                        const iconSrc = `https://openweathermap.org/img/w/${icon}.png`
+                        setIconSrc(iconSrc)
+                        const temp = data.main.temp
+                        setTemp(temp)
+                        setMajorTemp(temp)
+                        const tempFaringeint = temp * 1.8 + 32
+                        setTempFaringeint(tempFaringeint)
+                        setCity(data.name)
+                    })
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        fetchDataWeather()
     }, [])
     return (
         <div className="weather-wrapper">

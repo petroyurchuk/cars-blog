@@ -1,0 +1,29 @@
+.social-block {
+    height: 100px;
+    width: 97px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: center;
+    color: #fff;
+    padding-top: 10px;
+    text-decoration: none;
+}
+.social-block__icon {
+    max-width: 25px;
+    max-height: 40px;
+}
+.social-block__number {
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 21px;
+}
+.social-block__description {
+    font-size: 13px;
+    line-height: 21px;
+    text-transform: capitalize;
+}
+.social-list__wrapper {
+    display: flex;
+    column-gap: 16px;
+}
