@@ -1,3 +1,5 @@
+import { getNextPostId } from './ArrayOfAllPostsHomePage'
+
 type Props = {
     id: number
     image: string
@@ -11,7 +13,7 @@ const defaultDescription =
     'A breathless session saw a quite staggering 23 cars blanketed by just eight tenths of a second with positions changing at almost every moment. Such was the competitiveness that the ballast-laden VW of Jason Plato could only manage 22nd on the grid, although the double champion has cited an as yet unknown problem with...'
 const ProductPostsData: Props[] = [
     {
-        id: 1,
+        id: getNextPostId(),
         image: '/images/Products/PopularPosts/popular-posts-01.jpg',
         category: 'deals',
         title: '10 Best Car Deals of the Month in January',
@@ -20,7 +22,7 @@ const ProductPostsData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 2,
+        id: getNextPostId(),
         image: '/images/Products/PopularPosts/popular-posts-02.jpg',
         category: 'New Generations',
         title: 'Lamborghini Aventador Will Blow Your Mind',
@@ -29,7 +31,7 @@ const ProductPostsData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 3,
+        id: getNextPostId(),
         image: '/images/Products/PopularPosts/popular-posts-03.jpg',
         category: 'deals',
         title: 'Tesla Reportedly Loses $4,000 on Each Model S',
@@ -38,7 +40,7 @@ const ProductPostsData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 4,
+        id: getNextPostId(),
         image: '/images/Products/PopularPosts/popular-posts-04.jpg',
         category: 'hi-tech',
         title: '400-hp BMW Diesel Just Around the Corner',
@@ -47,7 +49,7 @@ const ProductPostsData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 5,
+        id: getNextPostId(),
         image: '/images/Products/PopularPosts/popular-posts-05.jpg',
         category: 'tests',
         title: '2016 Porsche Boxster Spyder: We’re Stoked!',
@@ -56,7 +58,7 @@ const ProductPostsData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 6,
+        id: getNextPostId(),
         image: '/images/Products/PopularPosts/popular-posts-06.jpg',
         category: 'deals',
         title: 'Out-of-This-World Mansory Lamborghini Aventador',
@@ -65,7 +67,7 @@ const ProductPostsData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 7,
+        id: getNextPostId(),
         image: '/images/Products/PopularPosts/popular-posts-06.jpg',
         category: 'deals',
         title: 'Out-of-This-World Mansory Lamborghini Aventador',
@@ -77,7 +79,7 @@ const ProductPostsData: Props[] = [
 
 export const NewGenerationsData: Props[] = [
     {
-        id: 1,
+        id: getNextPostId(),
         image: '/images/Products/New-Generations/new-generations-01.jpg',
         category: 'new generations',
         title: 'Lamborghini Aventador Will Blow Your Mind',
@@ -86,7 +88,7 @@ export const NewGenerationsData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 2,
+        id: getNextPostId(),
         image: '/images/Products/New-Generations/new-generations-02.jpg',
         category: 'Auto shows',
         title: 'Ford GT Spotted on Detroit Highway',
@@ -95,7 +97,7 @@ export const NewGenerationsData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 3,
+        id: getNextPostId(),
         image: '/images/Products/New-Generations/new-generations-03.jpg',
         category: 'new generations',
         title: '2016 Mercedes CLS Coupe',
@@ -104,7 +106,7 @@ export const NewGenerationsData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 4,
+        id: getNextPostId(),
         image: '/images/Products/New-Generations/new-generations-04.jpg',
         category: 'new generations',
         title: '2016 Camaro Starts at $26.695',
@@ -113,7 +115,7 @@ export const NewGenerationsData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 5,
+        id: getNextPostId(),
         image: '/images/Products/New-Generations/new-generations-05.jpg',
         category: 'life',
         title: 'Dodge Unveils 2015 Charger Pursuit',
@@ -122,7 +124,7 @@ export const NewGenerationsData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 6,
+        id: getNextPostId(),
         image: '/images/Products/New-Generations/new-generations-06.jpg',
         category: 'new generations',
         title: '2017 Mercedes-AMG C63 Coupe Revealed',
@@ -133,7 +135,7 @@ export const NewGenerationsData: Props[] = [
 ]
 export const FirstContactData: Props[] = [
     {
-        id: 1,
+        id: getNextPostId(),
         image: '/images/Products/First-Contact/first-contact-01.jpg',
         category: 'new generations',
         title: 'Ford GT Spotted on Detroit Highway',
@@ -142,7 +144,7 @@ export const FirstContactData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 2,
+        id: getNextPostId(),
         image: '/images/Products/First-Contact/first-contact-02.jpg',
         category: 'first contact',
         title: '2016 Hyundai Sonata Hybrid',
@@ -151,7 +153,7 @@ export const FirstContactData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 3,
+        id: getNextPostId(),
         image: '/images/Products/First-Contact/first-contact-03.jpg',
         category: 'first contact',
         title: 'Tesla Model S Convertible',
@@ -160,7 +162,7 @@ export const FirstContactData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 4,
+        id: getNextPostId(),
         image: '/images/Products/First-Contact/first-contact-04.jpg',
         category: 'first contact',
         title: '2016 Lincoln MKX',
@@ -169,7 +171,7 @@ export const FirstContactData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 5,
+        id: getNextPostId(),
         image: '/images/Products/First-Contact/first-contact-05.jpg',
         category: 'first contact',
         title: 'Buick Enclave Tuscan Edition',
@@ -178,7 +180,7 @@ export const FirstContactData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 6,
+        id: getNextPostId(),
         image: '/images/Products/First-Contact/first-contact-06.jpg',
         category: 'first contact',
         title: 'Land Rover Discovery Sport',
@@ -187,7 +189,7 @@ export const FirstContactData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 7,
+        id: getNextPostId(),
         image: '/images/Products/First-Contact/first-contact-07.jpg',
         category: 'first contact',
         title: 'Roush Stage 3 Mustang',
@@ -198,7 +200,7 @@ export const FirstContactData: Props[] = [
 ]
 export const HiTechData: Props[] = [
     {
-        id: 1,
+        id: getNextPostId(),
         image: '/images/Products/Hi-Tech/hi-tech-01.jpg',
         category: 'hi-tech',
         title: '400-hp BMW Diesel Just Around the Corner',
@@ -207,7 +209,7 @@ export const HiTechData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 2,
+        id: getNextPostId(),
         image: '/images/Products/Hi-Tech/hi-tech-02.jpg',
         category: 'auto shows',
         title: 'Ford GT Spotted on Detroit Highway',
@@ -216,7 +218,7 @@ export const HiTechData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 3,
+        id: getNextPostId(),
         image: '/images/Products/Hi-Tech/hi-tech-03.jpg',
         category: 'hi-tech',
         title: 'The Corvette Hoverboard is Here and it’s Real',
@@ -225,7 +227,7 @@ export const HiTechData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 4,
+        id: getNextPostId(),
         image: '/images/Products/Hi-Tech/hi-tech-04.jpg',
         category: 'hi-tech',
         title: '605 HP Audi S8 Plus Dials the Power',
@@ -234,7 +236,7 @@ export const HiTechData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 5,
+        id: getNextPostId(),
         image: '/images/Products/Hi-Tech/hi-tech-05.jpg',
         category: 'hi-tech',
         title: 'Volkswagen e-Golf SEL Premium',
@@ -243,7 +245,7 @@ export const HiTechData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 6,
+        id: getNextPostId(),
         image: '/images/Products/Hi-Tech/hi-tech-06.jpg',
         category: 'hi-tech',
         title: 'Land Rover Recreates 1948 Production Line',
@@ -252,7 +254,7 @@ export const HiTechData: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 7,
+        id: getNextPostId(),
         image: '/images/Products/Hi-Tech/hi-tech-07.jpg',
         category: 'hi-tech',
         title: 'The Bloodhound Supersonic Car',
@@ -264,7 +266,7 @@ export const HiTechData: Props[] = [
 
 export const latestArticlesDataProduct: Props[] = [
     {
-        id: 1,
+        id: getNextPostId(),
         image: '/images/Products/Latest-Articles/latest-articles-01.jpg',
         category: 'deals',
         title: 'BFGoodrich Unveils Supersport G-Force Tires',
@@ -273,7 +275,7 @@ export const latestArticlesDataProduct: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 2,
+        id: getNextPostId(),
         image: '/images/Products/Latest-Articles/latest-articles-02.jpg',
         category: 'deals',
         title: 'New Car Financing and Cash Offers for Youngsters',
@@ -282,7 +284,7 @@ export const latestArticlesDataProduct: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 3,
+        id: getNextPostId(),
         image: '/images/Products/Latest-Articles/latest-articles-03.jpg',
         category: 'deals',
         title: '10 Best Car Deals of the Month in January',
@@ -291,7 +293,7 @@ export const latestArticlesDataProduct: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 4,
+        id: getNextPostId(),
         image: '/images/Products/Latest-Articles/latest-articles-04.jpg',
         category: 'deals',
         title: 'Out-of-This-World Mansory Lamborghini Aventador',
@@ -300,7 +302,7 @@ export const latestArticlesDataProduct: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 5,
+        id: getNextPostId(),
         image: '/images/Products/Latest-Articles/latest-articles-05.jpg',
         category: 'deals',
         title: 'Tesla Reportedly Loses $4,000 on Each Model S',

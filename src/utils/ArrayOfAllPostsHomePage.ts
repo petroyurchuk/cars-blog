@@ -7,12 +7,16 @@ type Props = {
     date: string
     description: string
 }
+let lastPostId = 0
+export function getNextPostId() {
+    return ++lastPostId
+}
 export const defaultDescription =
     'A breathless session saw a quite staggering 23 cars blanketed by just eight tenths of a second with positions changing at almost every moment. Such was the competitiveness that the ballast-laden VW of Jason Plato could only manage 22nd on the grid, although the double champion has cited an as yet unknown problem with...'
 
 const ArrayOfAllPostsHomePage: Props[] = [
     {
-        id: 1,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-01.jpg',
         category: 'deals',
         title: 'Junkyard All-You-Can-Carry Sale Next Monday',
@@ -21,7 +25,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 2,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-02.jpg',
         category: 'tuning',
         title: 'Justin Bieber’s Ferrari 458 Italia Transformation',
@@ -30,7 +34,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 3,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-03.jpg',
         category: 'tuning',
         title: 'Limited Production Confirmed for McLaren 675LT',
@@ -39,7 +43,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 4,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-04.jpg',
         category: 'tuning',
         title: 'There’s Nothing Funny About Toyota’s Fuel Leaks',
@@ -48,7 +52,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 5,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-05.jpg',
         category: 'tuning',
         title: 'Hackers Seize Control of a Tesla Model S',
@@ -57,7 +61,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 6,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-06.jpg',
         category: 'tuning',
         title: 'Modify Your New Mercedes-Benz C-Class',
@@ -66,7 +70,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 7,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-07.jpg',
         category: 'tuning',
         title: 'Volvo 142 Drift Car Project Hits Swedish Street',
@@ -75,7 +79,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 8,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-08.jpg',
         category: 'life',
         title: 'Fiat Forced to Buy Back 500K Vehicles',
@@ -84,7 +88,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 9,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-09.jpg',
         category: 'life',
         title: 'BMW Overhauls Wheelchair for Paralympics',
@@ -93,7 +97,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 10,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-10.jpg',
         category: 'life',
         title: 'Mad Max Fury Road Re-Created With Go-Karts',
@@ -102,7 +106,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 11,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-11.jpg',
         category: 'life',
         title: 'Cars in Miniature Swarm Greater Boston Area',
@@ -111,7 +115,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 12,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-12.jpg',
         category: 'life',
         title: 'Get Ready for New Diesel Cadillacs',
@@ -120,7 +124,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 13,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-13.jpg',
         category: 'life',
         title: 'All But 2 Buick Models Built Overseas',
@@ -129,7 +133,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 14,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-14.jpg',
         category: 'tests',
         title: 'Volkswagen Beetle R-Line is a Little Beast',
@@ -138,7 +142,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 15,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-15.jpg',
         category: 'tests',
         title: 'Land Rover Range Rover Sport’s New Diesel V6',
@@ -147,7 +151,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 16,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-16.jpg',
         category: 'tests',
         title: 'The New Jaguar Crossover “F-Pace”',
@@ -156,7 +160,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 17,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-17.jpg',
         category: 'tests',
         title: 'Ferrari Testing Right Hand Drive California',
@@ -165,7 +169,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 18,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-18.jpg',
         category: 'tests',
         title: '2017 Ford Raptor Dominates Off-Road Trailchips',
@@ -174,7 +178,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 19,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-19.jpg',
         category: 'reviews',
         title: '2016 Chevrolet Malibu: No Yawning!',
@@ -183,7 +187,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 20,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-20.jpg',
         category: 'reviews',
         title: 'Having Fun on Country Roads with Audi R8',
@@ -192,7 +196,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 21,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-21.jpg',
         category: 'reviews',
         title: '2015 Chevrolet Camaro ZL1 Coupe',
@@ -201,7 +205,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 22,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-22.jpg',
         category: 'reviews',
         title: 'Mercedes AMG C63 S Sedan',
@@ -210,7 +214,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 23,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-23.jpg',
         category: 'reviews',
         title: 'Chevy Silverado Midnight Edition',
@@ -219,7 +223,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 24,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-24.jpg',
         category: 'reviews',
         title: 'Volkswagen Golf SportWagen TDI',
@@ -228,7 +232,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 25,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-25.jpg',
         category: 'motorSports',
         title: 'Scenes From the 2015 Pebble Beach Tour',
@@ -237,7 +241,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 26,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-26.jpg',
         category: 'motorSports',
         title: '’70s F1 cars will star at Goodwood',
@@ -246,7 +250,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 27,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-27.jpg',
         category: 'motorSports',
         title: 'Could Your Child Win a Season’s Racing?',
@@ -255,7 +259,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 28,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-28.jpg',
         category: 'motorSports',
         title: 'Octane’s Goodwood Festival of Speed',
@@ -264,7 +268,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 29,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-29.jpg',
         category: 'motorSports',
         title: 'All the Best Bits of Goodwood Motorsport',
@@ -273,7 +277,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 30,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-30.jpg',
         category: 'motorSports',
         title: 'LaFerrari, McLaren P1, and Porsche 918 On-Track',
@@ -282,7 +286,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 31,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-31.jpg',
         category: 'auto shows',
         title: 'Mercedes-Benz Plans GLE Hybrid to Debut in New York',
@@ -291,7 +295,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 32,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-32.jpg',
         category: 'auto shows',
         title: 'Two New Scion Models Confirmed for the New York Auto Show',
@@ -300,7 +304,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 33,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-33.jpg',
         category: 'oldies',
         title: 'Monterey Auctions See $393 M in Sales',
@@ -309,7 +313,7 @@ const ArrayOfAllPostsHomePage: Props[] = [
         description: defaultDescription,
     },
     {
-        id: 34,
+        id: getNextPostId(),
         image: '/images/Products/All-Posts/all-posts-34.jpg',
         category: 'oldies',
         title: 'What Next for the Barn Finds?',

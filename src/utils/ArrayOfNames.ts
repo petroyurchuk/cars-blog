@@ -35,6 +35,11 @@ const ArrayOfNames: ListItem[] = [
         name: 'Contact',
         to: '/contact',
     },
+    {
+        id: 8,
+        name: 'Favorites',
+        to: '/favorites',
+    },
 ]
 
 export default ArrayOfNames

@@ -4,6 +4,8 @@ import BigSubMenu from 'components/BigSubMenu/BigSubMenu'
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Menu.scss'
+import { useAppSelector } from 'redux/hooks'
+
 type ListItem = {
     id: number
     name: string
@@ -19,6 +21,8 @@ const Menu: React.FC<ListProps> = ({ items }) => {
         setHoveredItemId(itemId)
         setHoveredItem(true)
     }
+
+    const isLikedListLength = useAppSelector((state) => state.like)
     return (
         <ul
             className="header-bottom__main-menu main-menu"
@@ -32,7 +36,9 @@ const Menu: React.FC<ListProps> = ({ items }) => {
                 >
                     <NavLink to={item.to} className="main-menu__link main-link">
                         {item.name}
-                        {![1, 6, 7].includes(item.id) && <ArrowDropDown />}
+                        {![1, 6, 7, 8].includes(item.id) && <ArrowDropDown />}
+                        {[8].includes(item.id) &&
+                            Object.keys(isLikedListLength).length}
                     </NavLink>
                 </li>
             ))}
