@@ -20,6 +20,7 @@ import MotorSports from 'pages/MotorSports/MotorSports'
 import NewGenerations from 'pages/NewGenerations/NewGenerations'
 import Oldies from 'pages/Oldies/Oldies'
 import Favorites from 'pages/Favorites/Favorites'
+import PostPage from 'pages/Post/PostPage'
 
 type Props = {}
 const App = (props: Props) => {
@@ -56,6 +57,7 @@ const App = (props: Props) => {
                             element={<NewGenerations />}
                         />
                         <Route path="/cars/oldies" element={<Oldies />} />
+                        <Route path="/posts/:id" element={<PostPage />} />
                     </Routes>
                 </div>
                 <Footer />

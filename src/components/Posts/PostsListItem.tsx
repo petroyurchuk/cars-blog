@@ -4,6 +4,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import { useAppDispatch, useAppSelector } from 'redux/hooks'
 import { toggleLike } from 'redux/likeReducer'
+import { Link } from 'react-router-dom'
 type Props = {
     id: number
     title: string
@@ -54,12 +55,12 @@ const PostsListItem = ({
                     </div>
                 </div>
                 <div className="item-post__description">{description}</div>
-                <a
-                    href="/"
+                <Link
+                    to={`/posts/${id}`}
                     className="item-post__link-read-more list-item__read-more-btn"
                 >
                     Reade more
-                </a>
+                </Link>
             </div>
         </div>
     )

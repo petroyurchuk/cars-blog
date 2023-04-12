@@ -6,7 +6,7 @@ type Props = {}
 const Favorites = (props: Props) => {
     const likedPosts = useAppSelector((state) => state.like)
     return (
-        <div>
+        <div className="cars-page__container">
             <Title>Favorites</Title>
             <FavoritesPostsList likedPosts={likedPosts} />
         </div>
