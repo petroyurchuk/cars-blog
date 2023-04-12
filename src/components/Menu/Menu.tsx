@@ -23,6 +23,7 @@ const Menu: React.FC<ListProps> = ({ items }) => {
     }
 
     const isLikedListLength = useAppSelector((state) => state.like)
+
     return (
         <ul
             className="header-bottom__main-menu main-menu"
@@ -37,8 +38,15 @@ const Menu: React.FC<ListProps> = ({ items }) => {
                     <NavLink to={item.to} className="main-menu__link main-link">
                         {item.name}
                         {![1, 6, 7, 8].includes(item.id) && <ArrowDropDown />}
-                        {[8].includes(item.id) &&
-                            Object.keys(isLikedListLength).length}
+                        {[8].includes(item.id) && (
+                            <div className='count-current-favorites-posts'>
+                                {
+                                    Object.values(isLikedListLength).filter(
+                                        (item) => item
+                                    ).length
+                                }
+                            </div>
+                        )}
                     </NavLink>
                 </li>
             ))}

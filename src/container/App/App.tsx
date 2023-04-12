@@ -19,6 +19,7 @@ import HiTech from 'pages/HiTech/HiTech'
 import MotorSports from 'pages/MotorSports/MotorSports'
 import NewGenerations from 'pages/NewGenerations/NewGenerations'
 import Oldies from 'pages/Oldies/Oldies'
+import Favorites from 'pages/Favorites/Favorites'
 
 type Props = {}
 const App = (props: Props) => {
@@ -33,6 +34,7 @@ const App = (props: Props) => {
                         <Route path="/cars" element={<Cars />} />
                         <Route path="/reviews" element={<Reviews />} />
                         <Route path="/tests" element={<Tests />} />
+                        <Route path="/favorites" element={<Favorites />} />
                         <Route path="/more/deals" element={<Deals />} />
                         <Route path="/more/life" element={<Life />} />
                         <Route path="/more/tuning" element={<Tuning />} />

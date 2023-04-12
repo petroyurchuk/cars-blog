@@ -10,7 +10,7 @@ type Props = {
     category: string
     title: string
     author: string
-    data: string
+    date: string
     description: string
 }
 const PopularPostsListItem = ({
@@ -19,7 +19,7 @@ const PopularPostsListItem = ({
     category,
     title,
     author,
-    data,
+    date,
     description,
 }: Props) => {
     const isLiked = useAppSelector((state) => state.like[id])
@@ -51,7 +51,7 @@ const PopularPostsListItem = ({
                                 </span>
                                 <span className="list-item__data">
                                     {' '}
-                                    - {data}
+                                    - {date}
                                 </span>
                             </div>
 

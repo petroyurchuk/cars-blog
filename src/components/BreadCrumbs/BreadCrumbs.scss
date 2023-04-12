@@ -1,3 +1,7 @@
+:root {
+    --swiper-navigation-size: 30px;
+    --swiper-theme-color: #fff;
+}
 .popular-posts__container,
 .latest-articles__container {
     padding: 0px 48px;
@@ -69,4 +73,10 @@
     &:focus {
         color: #fff;
     }
+}
+.css-1aquho2-MuiTabs-indicator {
+    background-color: #fff;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #fff;
 }

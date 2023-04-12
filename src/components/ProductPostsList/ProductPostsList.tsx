@@ -33,7 +33,7 @@ const ProductPostsList = ({ posts }: PropsProductPostsList) => {
                                 category={category}
                                 title={title}
                                 author={author}
-                                data={date}
+                                date={date}
                                 description={description}
                             />
                         </Grid>

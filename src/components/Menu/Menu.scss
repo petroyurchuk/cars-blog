@@ -32,3 +32,17 @@
 .active {
     color: #f77b33;
 }
+.count-current-favorites-posts {
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    color: #000;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}

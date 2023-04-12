@@ -28,7 +28,7 @@ const LatestArticles = (props: Props) => {
                                 category={category}
                                 title={title}
                                 author={author}
-                                data={date}
+                                date={date}
                                 description={description}
                             />
                         </Grid>

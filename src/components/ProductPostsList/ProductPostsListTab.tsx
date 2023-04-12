@@ -48,7 +48,7 @@ const ProductPostsListTab = ({ arrayOfData }: PropsListTab) => {
                                         category={category}
                                         title={title}
                                         author={author}
-                                        data={date}
+                                        date={date}
                                         description={description}
                                     />
                                 </MuiGrid>
