@@ -20,6 +20,7 @@ import {
     latestArticlesDataProduct,
 } from 'utils/ProductPostsData'
 import SocialListPost from 'components/SocialListPost/SocialListPost'
+import SwipeArticles from 'components/SwipeArticles/SwipeArticles'
 type Props = {}
 const PostPage = (props: Props) => {
     const bigArray = [
@@ -93,6 +94,7 @@ const PostPage = (props: Props) => {
                         )
                     )}
                     <SocialListPost />
+                    <SwipeArticles />
                 </div>
 
                 <div className="wrapper-right-side">
