@@ -19,6 +19,7 @@ import {
     HiTechData,
     latestArticlesDataProduct,
 } from 'utils/ProductPostsData'
+import SocialListPost from 'components/SocialListPost/SocialListPost'
 type Props = {}
 const PostPage = (props: Props) => {
     const bigArray = [
@@ -91,6 +92,7 @@ const PostPage = (props: Props) => {
                             </div>
                         )
                     )}
+                    <SocialListPost />
                 </div>
 
                 <div className="wrapper-right-side">
