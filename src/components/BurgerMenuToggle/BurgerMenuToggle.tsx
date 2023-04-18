@@ -6,6 +6,7 @@ import BackArrow from '@mui/icons-material/ArrowBackIos'
 import './BurgerMenuToggle.scss'
 import Social from 'components/HeaderTop/Social'
 import ResponsiveSignIn from 'components/ResponsiveSignIn/ResponsiveSignIn'
+import { Link } from 'react-router-dom'
 
 type Props = {}
 const BurgerMenuToggle = (props: Props) => {
@@ -37,8 +38,9 @@ const BurgerMenuToggle = (props: Props) => {
         return null
     }
 
-    const { namesOfList: namesOfFirstList } = filteredList
-    const { namesOfList: namesOfNestedList } = filteredSecondList
+    const { namesOfList: namesOfFirstList, linksNames } = filteredList
+    const { namesOfList: namesOfNestedList, linksNames: linksOfNestedMenu } =
+        filteredSecondList
 
     return (
         <div className="burger-menu-toggle__container common-background">
@@ -61,14 +63,14 @@ const BurgerMenuToggle = (props: Props) => {
                 </div>
                 <ul className="mobile-menu">
                     <li className="mobile-menu__item">
-                        <a href="/" className="mobile-menu__link">
+                        <Link to="/" className="mobile-menu__link">
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li ref={menuFirstItemRef} className="mobile-menu__item">
-                        <a href="/" className="mobile-menu__link">
+                        <Link to="/cars" className="mobile-menu__link">
                             Cars
-                        </a>
+                        </Link>
                         <ArrowForward
                             onClick={showNestedMenu}
                             className="default-arrow"
@@ -76,9 +78,12 @@ const BurgerMenuToggle = (props: Props) => {
                         <ul className="nested-menu">
                             {namesOfFirstList.map((item, index) => (
                                 <li key={index} className="nested-menu__item">
-                                    <a href="/" className="nested-menu__link">
+                                    <Link
+                                        to={linksNames[index]}
+                                        className="nested-menu__link"
+                                    >
                                         {item}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -104,9 +109,12 @@ const BurgerMenuToggle = (props: Props) => {
                         <ul className="nested-menu">
                             {namesOfNestedList.map((item, index) => (
                                 <li key={index} className="nested-menu__item">
-                                    <a href="/" className="nested-menu__link">
+                                    <Link
+                                        to={linksOfNestedMenu[index]}
+                                        className="nested-menu__link"
+                                    >
                                         {item}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

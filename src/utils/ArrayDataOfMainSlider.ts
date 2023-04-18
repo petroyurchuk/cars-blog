@@ -5,10 +5,13 @@ type PropsArray = {
     author: string
     imageSrcResponsiveFirst: string
 }
-
+type PropsHomeTextSlider = {
+    id: number
+    title: string
+}
 const ArrayDataOfMainSlider: PropsArray[] = [
     {
-        id: 1,
+        id: 99,
         title: 'Ford GT Spotted on Detroit Highway',
         imageSrc: '/images/HomeSlider/home-slider-car-01.jpg',
         author: 'Alex Reeve',
@@ -16,7 +19,7 @@ const ArrayDataOfMainSlider: PropsArray[] = [
             '/images/HomeSlider/home-slider-car-01(534x462).jpg',
     },
     {
-        id: 2,
+        id: 98,
         title: '2016 Camaro Starts at $26.695',
         imageSrc: '/images/HomeSlider/home-slider-car-02.jpg',
         author: 'Alex Reeve',
@@ -24,7 +27,7 @@ const ArrayDataOfMainSlider: PropsArray[] = [
             '/images/HomeSlider/home-slider-car-02(534x462).jpg',
     },
     {
-        id: 3,
+        id: 97,
         title: '2016 Mercedes CLS Coupe',
         imageSrc: '/images/HomeSlider/home-slider-car-03.jpg',
         author: 'Alex Reeve',
@@ -32,7 +35,7 @@ const ArrayDataOfMainSlider: PropsArray[] = [
             '/images/HomeSlider/home-slider-car-03(534x462).jpg',
     },
     {
-        id: 4,
+        id: 46,
         title: 'Dodge Unveils 2015 Charger Pursuit',
         imageSrc: '/images/HomeSlider/home-slider-car-04.jpg',
         author: 'Alex Reeve',
@@ -40,7 +43,7 @@ const ArrayDataOfMainSlider: PropsArray[] = [
             '/images/HomeSlider/home-slider-car-04(534x462).jpg',
     },
     {
-        id: 5,
+        id: 96,
         title: 'Lamborghini Aventador Will Blow Your Mind',
         imageSrc: '/images/HomeSlider/home-slider-car-05.jpg',
         author: 'Alex Reeve',
@@ -48,7 +51,7 @@ const ArrayDataOfMainSlider: PropsArray[] = [
             '/images/HomeSlider/home-slider-car-05(534x462).jpg',
     },
     {
-        id: 6,
+        id: 83,
         title: '400-hp BMW Diesel Just Around the Corner',
         imageSrc: '/images/HomeSlider/home-slider-car-06.jpg',
         author: 'Alex Reeve',
@@ -56,8 +59,8 @@ const ArrayDataOfMainSlider: PropsArray[] = [
             '/images/HomeSlider/home-slider-car-06(534x462).jpg',
     },
     {
-        id: 7,
-        title: '2016 Porsche Boxster Spyder: We’re Stoked!',
+        id: 70,
+        title: 'LaFerrari, McLaren P1, and Porsche 918 On-Track',
         imageSrc: '/images/HomeSlider/home-slider-car-07.jpg',
         author: 'Alex Reeve',
         imageSrcResponsiveFirst:
@@ -65,11 +68,26 @@ const ArrayDataOfMainSlider: PropsArray[] = [
     },
 ]
 
-export const ArraySliderText: string[] = [
-    '2016 Audi Q7 Debuts with Next-Gen Styling at Detroit',
-    '10 Best Car Deals of the Month in January',
-    'Volvo 142 Drift Car Project Hits Swedish Street',
-    'Could Your Child Win a Season’s Racing?',
-    'Chevy Silverado Midnight Edition',
+export const ArraySliderText: PropsHomeTextSlider[] = [
+    {
+        id: 76,
+        title: '2016 Audi Q7 Debuts with Next-Gen Styling at Detroit',
+    },
+    {
+        id: 112,
+        title: '10 Best Car Deals of the Month in January',
+    },
+    {
+        id: 123,
+        title: 'Volvo 142 Drift Car Project Hits Swedish Street',
+    },
+    {
+        id: 67,
+        title: 'Could Your Child Win a Season’s Racing?',
+    },
+    {
+        id: 102,
+        title: 'Chevy Silverado Midnight Edition',
+    },
 ]
 export default ArrayDataOfMainSlider

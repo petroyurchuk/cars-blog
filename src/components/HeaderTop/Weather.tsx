@@ -27,7 +27,7 @@ const Weather = (props: Props) => {
         const fetchDataWeather = async () => {
             try {
                 await fetch(
-                    'https://api.openweathermap.org/data/2.5/weather?q=IVANO-FRANKIVSK&units=metric&APPID=5d066958a60d315387d9492393935c19'
+                    'https://api.openweathermap.org/data/2.5/weather?q=Lviv&units=metric&APPID=5d066958a60d315387d9492393935c19'
                 )
                     .then((resolve) => resolve.json())
                     .then((data) => {

@@ -3,6 +3,7 @@ import Slider from 'react-slick'
 
 import '../BigSubMenu/BigSubMenu.scss'
 import './MenuInSubMenu.scss'
+import { Link } from 'react-router-dom'
 
 type PropsList = {
     index: number
@@ -50,20 +51,24 @@ const MenuInSubMenu = ({ index }: PropsList) => {
             },
         ],
     }
-    const { namesOfList, className, images, title } = filteredList
+    const { namesOfList, className, images, title, ids } = filteredList
 
     return (
         <ul className={className}>
             <Slider {...settings}>
                 {namesOfList.map((name, idx) => (
                     <li key={idx} className="sub-menu__item">
-                        <a href="/" className="sub-menu__link">
+                        <Link
+                            to={`/posts/${ids[idx]}`}
+                            className="sub-menu__link"
+                        >
                             <div className="image-wrapper">
                                 <img src={images[idx]} alt={title} />
+
                                 <span className="title-link">{title}</span>
                             </div>
                             {name}
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </Slider>

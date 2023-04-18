@@ -1,4 +1,5 @@
 import { Grid } from '@mui/material'
+import { Link } from 'react-router-dom'
 import './Preview.scss'
 
 type Props = {
@@ -31,9 +32,9 @@ const Preview = ({ dataPosts, categoryForSort }: PropsPreview) => {
                             key={id}
                             xs={6}
                         >
-                            <a href="/" className="link-preview">
+                            <Link to={`/posts/${id}`} className="link-preview">
                                 <img src={image} alt={title} />
-                            </a>
+                            </Link>
                             <div className="preview-info-block">
                                 <a href="/" className="preview-category">
                                     {category}

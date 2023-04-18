@@ -4,6 +4,7 @@ type PropsList = {
     namesOfList: string[]
     className: string
     images: string[]
+    ids: number[]
 }
 
 const ArrayOfNamesOfMenuInSubMenu: PropsList[] = [
@@ -28,8 +29,8 @@ const ArrayOfNamesOfMenuInSubMenu: PropsList[] = [
             '/images/Auto-shows/auto-shows-05.jpg',
             '/images/Auto-shows/auto-shows-06.jpg',
             '/images/Auto-shows/auto-shows-07.jpg',
-
         ],
+        ids: [71, 72, 73, 74, 75, 76, 43],
     },
     {
         title: 'First Contact',
@@ -41,9 +42,9 @@ const ArrayOfNamesOfMenuInSubMenu: PropsList[] = [
             '2016 Lincoln MKX',
             'Land Rover Discovery Sport',
             'Tesla Model S Convertible',
-
         ],
-        className: 'menu-in-sub-menu sub-menu__cars__first-contact big-sub-menu',
+        className:
+            'menu-in-sub-menu sub-menu__cars__first-contact big-sub-menu',
         images: [
             '/images/First-contact/first-contact-01.jpg',
             '/images/First-contact/first-contact-02.jpg',
@@ -52,6 +53,7 @@ const ArrayOfNamesOfMenuInSubMenu: PropsList[] = [
             '/images/First-contact/first-contact-05.jpg',
             '/images/First-contact/first-contact-06.jpg',
         ],
+        ids: [89, 90, 91, 92, 93, 94],
     },
     {
         title: 'Hi-Tech',
@@ -63,7 +65,6 @@ const ArrayOfNamesOfMenuInSubMenu: PropsList[] = [
             'Volkswagen e-Golf SEL Premium',
             '605 HP Audi S8 Plus Dials the Power',
             'The Bloodhound Supersonic Car',
-
         ],
         className: 'menu-in-sub-menu sub-menu__cars__hi-tech big-sub-menu',
         images: [
@@ -74,8 +75,9 @@ const ArrayOfNamesOfMenuInSubMenu: PropsList[] = [
             '/images/Hi-tech/hi-tech-05.jpg',
             '/images/Hi-tech/hi-tech-06.jpg',
         ],
+        ids: [83, 84, 85, 86, 87, 88],
     },
-     {
+    {
         title: 'Motor Sports',
         index: 4,
         namesOfList: [
@@ -95,6 +97,7 @@ const ArrayOfNamesOfMenuInSubMenu: PropsList[] = [
             '/images/Motor-sports/motor-sports-05.jpg',
             '/images/Motor-sports/motor-sports-06.jpg',
         ],
+        ids: [25, 26, 67, 68, 69, 70],
     },
     {
         title: 'New Generations',
@@ -106,7 +109,8 @@ const ArrayOfNamesOfMenuInSubMenu: PropsList[] = [
             '2016 Mercedes CLS Coupe',
             '2016 Camaro Starts at $26.695',
         ],
-        className: 'menu-in-sub-menu sub-menu__cars__new-generations big-sub-menu',
+        className:
+            'menu-in-sub-menu sub-menu__cars__new-generations big-sub-menu',
         images: [
             '/images/New-generations/new-generations-01.jpg',
             '/images/New-generations/new-generations-02.jpg',
@@ -114,8 +118,9 @@ const ArrayOfNamesOfMenuInSubMenu: PropsList[] = [
             '/images/New-generations/new-generations-04.jpg',
             '/images/New-generations/new-generations-05.jpg',
         ],
+        ids: [95, 96, 46, 97, 98, 88],
     },
-     {
+    {
         title: 'Oldies',
         index: 6,
         namesOfList: [
@@ -135,6 +140,7 @@ const ArrayOfNamesOfMenuInSubMenu: PropsList[] = [
             '/images/Oldies/oldies-05.jpg',
             '/images/Oldies/oldies-06.jpg',
         ],
+        ids: [77, 78, 79, 80, 81, 82],
     },
 ]
 export default ArrayOfNamesOfMenuInSubMenu

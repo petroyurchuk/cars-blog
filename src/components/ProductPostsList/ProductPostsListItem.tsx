@@ -35,15 +35,27 @@ const PopularPostsListItem = ({
                             alt={title}
                             className="list-item__image"
                         />
-                        <a href="/" className="list-item__link-category">
+                        <Link
+                            to={`/${
+                                ['deals', 'life', 'tuning'].includes(category)
+                                    ? `more/${category}`
+                                    : ['reviews', 'tests'].includes(category)
+                                    ? `${category}`
+                                    : `cars/${category.split(' ').join('-')}`
+                            }`}
+                            className="list-item__link-category"
+                        >
                             {category}
-                        </a>
+                        </Link>
                     </div>
                     <div className="list-item__text-info">
                         <h3 className="list-item__title">
-                            <a href="/" className="list-item__title-link">
+                            <Link
+                                to={`/posts/${id}`}
+                                className="list-item__title-link"
+                            >
                                 {title}
-                            </a>
+                            </Link>
                         </h3>
                         <div className="list-item__info-about-post-wrapper">
                             <div>

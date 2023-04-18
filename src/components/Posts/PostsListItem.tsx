@@ -31,11 +31,33 @@ const PostsListItem = ({
                 <img src={image} alt={title} />
             </div>
             <div className="item-post__text-wrapper">
-                <h2 className="item-post__title">{title}</h2>
+                <h2 className="item-post__title">
+                    <Link to={`/posts/${id}`} className="item-post-title__link">
+                        {title}
+                    </Link>
+                </h2>
                 <div className="item-post__post-info">
-                    <a href="/" className="item-post__link-category">
+                    <Link
+                        to={`/${
+                            [
+                                'deals',
+                                'life',
+                                'tuning',
+                                'reviews',
+                                'tests',
+                            ].includes(category.toLowerCase())
+                                ? `more/${category}`
+                                : ['reviews', 'tests'].includes(category)
+                                ? `${category}`
+                                : `cars/${category
+                                      .toLowerCase()
+                                      .split(' ')
+                                      .join('-')}`
+                        }`}
+                        className="item-post__link-category"
+                    >
                         {category}
-                    </a>
+                    </Link>
                     <div className="list-item__info-about-post-wrapper">
                         <div>
                             <span className="item-post__author">{author}</span>
