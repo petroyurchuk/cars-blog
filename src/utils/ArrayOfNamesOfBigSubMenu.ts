@@ -4,6 +4,7 @@ type PropsArray = {
     namesOfList: string[]
     className: string
     images: string[]
+    ids: number[]
 }
 
 const ArrayOfNamesOfBigSubMenu: PropsArray[] = [
@@ -27,6 +28,7 @@ const ArrayOfNamesOfBigSubMenu: PropsArray[] = [
             '/images/Reviews/reviews-05.jpg',
             '/images/Reviews/reviews-06.jpg',
         ],
+        ids: [19, 20, 100, 101, 102, 103, 104],
     },
     {
         title: 'Tests',
@@ -48,6 +50,7 @@ const ArrayOfNamesOfBigSubMenu: PropsArray[] = [
             '/images/Tests/tests-05.jpg',
             '/images/Tests/tests-06.jpg',
         ],
+        ids: [14, 15, 105, 106, 107, 108],
     },
 ]
 export default ArrayOfNamesOfBigSubMenu

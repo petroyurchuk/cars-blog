@@ -6,6 +6,7 @@ import '../MenuInSubMenu/MenuInSubMenu.scss'
 import './ShowAllSubMenu.scss'
 import 'slick-carousel/slick/slick.css'
 import './slick-theme.css'
+import { Link } from 'react-router-dom'
 type PropsList = {
     index: number
 }
@@ -54,19 +55,18 @@ const ShowAllSubMenu = ({ index }: PropsList) => {
         return null
     }
 
-    const { namesOfList, className, images, title } = filteredList
+    const { namesOfList, className, images, title, ids } = filteredList
 
     return (
         <ul className={className}>
             <Slider {...settings}>
                 {namesOfList.map((name, idx) =>
                     name.map((item, index) => (
-                        <li
-                            key={index}
-                            // style={{ width: '150px' }}
-                            className="sub-menu__item"
-                        >
-                            <a href="/" className="sub-menu__link">
+                        <li key={index} className="sub-menu__item">
+                            <Link
+                                to={`/posts/${ids[idx][index]}`}
+                                className="sub-menu__link"
+                            >
                                 <div className="image-wrapper">
                                     <img
                                         src={images[idx][index]}
@@ -77,7 +77,7 @@ const ShowAllSubMenu = ({ index }: PropsList) => {
                                     </span>
                                 </div>
                                 {item}
-                            </a>
+                            </Link>
                         </li>
                     ))
                 )}

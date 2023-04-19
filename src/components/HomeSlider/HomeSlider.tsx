@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { useState, useEffect } from 'react'
 import './HomeSlider.scss'
 import 'swiper/swiper-bundle.min.css'
+import { Link } from 'react-router-dom'
 type Props = {}
 const HomeSlider = (props: Props) => {
     const [arrayOfImages, setArrayOfImages] = useState<string[]>([])
@@ -59,7 +60,10 @@ const HomeSlider = (props: Props) => {
                     {ArrayDataOfMainSlider.map(
                         ({ id, title, author }, index) => (
                             <SwiperSlide key={id} className="wrapper-slide">
-                                <a href="/" className="link-slide">
+                                <Link
+                                    to={`/posts/${id}`}
+                                    className="link-slide"
+                                >
                                     <img
                                         src={arrayOfImages[index]}
                                         alt={title}
@@ -68,7 +72,7 @@ const HomeSlider = (props: Props) => {
                                     <span className="author-slide">
                                         {author} - December 28, 2015
                                     </span>
-                                </a>
+                                </Link>
                             </SwiperSlide>
                         )
                     )}

@@ -4,6 +4,7 @@ import { Autoplay, Navigation, A11y, EffectCreative } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import './HomeTextSlider.scss'
 import { ArraySliderText } from 'utils/ArrayDataOfMainSlider'
+import { Link } from 'react-router-dom'
 type Props = {}
 const HomeTextSlider = (props: Props) => {
     return (
@@ -30,11 +31,11 @@ const HomeTextSlider = (props: Props) => {
                 spaceBetween={50}
                 slidesPerView={1}
             >
-                {ArraySliderText.map((item, index) => (
-                    <SwiperSlide key={index} className="slide-text">
-                        <a href="/" className="slide-text__link">
-                            {item}
-                        </a>
+                {ArraySliderText.map(({ title, id }) => (
+                    <SwiperSlide key={id} className="slide-text">
+                        <Link to={`/posts/${id}`} className="slide-text__link">
+                            {title}
+                        </Link>
                     </SwiperSlide>
                 ))}
             </Swiper>

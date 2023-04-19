@@ -12,18 +12,21 @@ $secondary-color: #767676;
     display: flex;
     column-gap: 20px;
     max-height: 297px;
-    &:hover .item-post__title {
+    &:hover .item-post-title__link {
         color: #f77b33;
     }
 }
-.item-post__title {
+.item-post__title,
+.item-post-title__link {
     font-weight: bold;
     font-size: 25px;
     line-height: 29px;
     margin-bottom: 11px;
     color: $primary-color;
     margin-top: 0;
+    text-decoration: none;
 }
+
 .item-post__post-info {
     display: flex;
     column-gap: 10px;

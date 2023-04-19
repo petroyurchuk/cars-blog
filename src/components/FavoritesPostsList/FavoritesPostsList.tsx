@@ -14,6 +14,8 @@ import {
     latestArticlesDataProduct,
 } from 'utils/ProductPostsData'
 import ProductPostsListItem from 'components/ProductPostsList/ProductPostsListItem'
+
+import './FavoritesPostsList.scss'
 type Props = {
     likedPosts: {
         [id: number]: boolean
@@ -40,7 +42,7 @@ const FavoritesPostsList = ({ likedPosts }: Props) => {
     )
 
     return (
-        <div>
+        <div className="favorites-posts-list__container">
             {res.map(
                 ({ id, title, category, image, author, date, description }) => (
                     <ProductPostsListItem

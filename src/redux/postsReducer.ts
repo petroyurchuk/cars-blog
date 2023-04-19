@@ -67,10 +67,10 @@ const initialState: PostsState = {
         ({ category }) => category.toLowerCase() === 'hi-tech'
     ),
     filteredMotorSportsPosts: postsArray.filter(
-        ({ category }) => category.toLowerCase() === 'motorsports'
+        ({ category }) => category.toLowerCase() === 'motor sports'
     ),
     postsMotorSports: postsArray.filter(
-        ({ category }) => category.toLowerCase() === 'motorsports'
+        ({ category }) => category.toLowerCase() === 'motor sports'
     ),
     filteredNewGenerationsPosts: postsArray.filter(
         ({ category }) => category.toLowerCase() === 'new generations'

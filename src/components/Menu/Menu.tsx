@@ -37,9 +37,9 @@ const Menu: React.FC<ListProps> = ({ items }) => {
                 >
                     <NavLink to={item.to} className="main-menu__link main-link">
                         {item.name}
-                        {![1, 6, 7, 8].includes(item.id) && <ArrowDropDown />}
-                        {[8].includes(item.id) && (
-                            <div className='count-current-favorites-posts'>
+                        {![1, 6].includes(item.id) && <ArrowDropDown />}
+                        {[6].includes(item.id) && (
+                            <div className="count-current-favorites-posts">
                                 {
                                     Object.values(isLikedListLength).filter(
                                         (item) => item
