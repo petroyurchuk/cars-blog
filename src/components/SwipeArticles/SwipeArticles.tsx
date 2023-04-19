@@ -5,21 +5,26 @@ const SwipeArticles = (props: Props) => {
     const { id } = useParams()
     const navigate = useNavigate()
 
-    const changeArticle = (e: React.MouseEvent<HTMLButtonElement>) => {
-        navigate(
-            `/posts/${
-                e.currentTarget.innerText.toLowerCase().includes('next')
-                    ? parseInt(id!) + 1
-                    : parseInt(id!) - 1
-            }`
-        )
+    const changeArticleOnPrevious = (
+        e: React.MouseEvent<HTMLButtonElement>
+    ) => {
+        navigate(`/posts/${parseInt(id!) > 1 ? parseInt(id!) - 1 : id}`)
+    }
+    const changeArticleOnNext = (e: React.MouseEvent<HTMLButtonElement>) => {
+        navigate(`/posts/${parseInt(id!) < 123 ? parseInt(id!) + 1 : id}`)
     }
     return (
         <div className="swipe-articles__container">
-            <button className="swipe-articles__button" onClick={changeArticle}>
+            <button
+                className="swipe-articles__button"
+                onClick={changeArticleOnPrevious}
+            >
                 Previous Article
             </button>
-            <button className="swipe-articles__button" onClick={changeArticle}>
+            <button
+                className="swipe-articles__button"
+                onClick={changeArticleOnNext}
+            >
                 Next Article
             </button>
         </div>
