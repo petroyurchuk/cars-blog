@@ -29,14 +29,8 @@ const ArrayOfNames: ListItem[] = [
         name: 'More',
         to: '/more/deals',
     },
-    { id: 6, name: 'About', to: '/about' },
     {
-        id: 7,
-        name: 'Contact',
-        to: '/contact',
-    },
-    {
-        id: 8,
+        id: 6,
         name: 'Favorites',
         to: '/favorites',
     },

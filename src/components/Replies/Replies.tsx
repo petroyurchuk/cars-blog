@@ -60,16 +60,22 @@ const Replies = (props: Props) => {
             textErrorForName: '',
             textErrorForEmail: '',
             textErrorForText: '',
+            color: '',
+            colorForEmail: '',
+            colorForText: '',
         }
         if (!/^[a-zA-Z]{2,20}$/.test(newReview.name)) {
             errors.textErrorForName = 'Name is required'
+            errors.color = 'red'
         }
 
         if (newReview.text.length < 3) {
             errors.textErrorForText = 'Comment is required'
+            errors.colorForText = 'red'
         }
         if (!/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(newReview.email)) {
             errors.textErrorForEmail = 'Email is required'
+            errors.colorForEmail = 'red'
         }
 
         if (
@@ -81,21 +87,10 @@ const Replies = (props: Props) => {
                 return [...prevState, newReview]
             })
             setNewReview({ name: '', email: '', text: '' })
-            setErrorMessage({
-                color: '',
-                colorForEmail: '',
-                colorForText: '',
-                textErrorForName: '',
-                textErrorForEmail: '',
-                textErrorForText: '',
-            })
         } else {
             setErrorMessage((prevState) => ({
                 ...prevState,
                 ...errors,
-                color: 'red',
-                colorForEmail: 'red',
-                colorForText: 'red',
             }))
         }
     }
