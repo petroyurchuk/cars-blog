@@ -6,12 +6,14 @@ type PropsSocialListItem = {
     number: string
     description: string
     bgColorOnHover: string
+    link: string
 }
 const SocialListItem = ({
     icon,
     number,
     description,
     bgColorOnHover,
+    link,
 }: PropsSocialListItem) => {
     const [bgColor, setBgColor] = useState<string>('#222')
     const style = {
@@ -25,7 +27,9 @@ const SocialListItem = ({
     }
     return (
         <a
-            href="/"
+            href={link}
+            target="_blank"
+            rel="noreferrer"
             className="social-block"
             style={style}
             onMouseEnter={handleMouseEnter}

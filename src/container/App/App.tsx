@@ -28,37 +28,39 @@ const App = (props: Props) => {
         <StyledEngineProvider injectFirst>
             <CssBaseline />
             <Container className="wrapper-app">
-                <Header />
-                <div className="main__container">
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/cars" element={<Cars />} />
-                        <Route path="/reviews" element={<Reviews />} />
-                        <Route path="/tests" element={<Tests />} />
-                        <Route path="/favorites" element={<Favorites />} />
-                        <Route path="/more/deals" element={<Deals />} />
-                        <Route path="/more/life" element={<Life />} />
-                        <Route path="/more/tuning" element={<Tuning />} />
-                        <Route
-                            path="/cars/auto-shows"
-                            element={<AutoShows />}
-                        />
-                        <Route
-                            path="/cars/first-contact"
-                            element={<FirstContact />}
-                        />
-                        <Route path="/cars/hi-tech" element={<HiTech />} />
-                        <Route
-                            path="/cars/motor-sports"
-                            element={<MotorSports />}
-                        />
-                        <Route
-                            path="/cars/new-generations"
-                            element={<NewGenerations />}
-                        />
-                        <Route path="/cars/oldies" element={<Oldies />} />
-                        <Route path="/posts/:id" element={<PostPage />} />
-                    </Routes>
+                <div className="wrapper-app__color">
+                    <Header />
+                    <div className="main__container">
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/cars" element={<Cars />} />
+                            <Route path="/reviews" element={<Reviews />} />
+                            <Route path="/tests" element={<Tests />} />
+                            <Route path="/favorites" element={<Favorites />} />
+                            <Route path="/more/deals" element={<Deals />} />
+                            <Route path="/more/life" element={<Life />} />
+                            <Route path="/more/tuning" element={<Tuning />} />
+                            <Route
+                                path="/cars/auto-shows"
+                                element={<AutoShows />}
+                            />
+                            <Route
+                                path="/cars/first-contact"
+                                element={<FirstContact />}
+                            />
+                            <Route path="/cars/hi-tech" element={<HiTech />} />
+                            <Route
+                                path="/cars/motor-sports"
+                                element={<MotorSports />}
+                            />
+                            <Route
+                                path="/cars/new-generations"
+                                element={<NewGenerations />}
+                            />
+                            <Route path="/cars/oldies" element={<Oldies />} />
+                            <Route path="/posts/:id" element={<PostPage />} />
+                        </Routes>
+                    </div>
                 </div>
                 <Footer />
             </Container>

@@ -87,6 +87,14 @@ const Replies = (props: Props) => {
                 return [...prevState, newReview]
             })
             setNewReview({ name: '', email: '', text: '' })
+            setErrorMessage({
+                color: '',
+                colorForEmail: '',
+                colorForText: '',
+                textErrorForName: '',
+                textErrorForEmail: '',
+                textErrorForText: '',
+            })
         } else {
             setErrorMessage((prevState) => ({
                 ...prevState,
