@@ -1,3 +1,4 @@
+import FooterCenterContent from './FooterCenterContent'
 import FooterLeftSideContent from './FooterLeftSideContent'
 import FooterListImages from './FooterListImages'
 
@@ -8,6 +9,7 @@ const FooterContainer = (props: Props) => {
             <FooterListImages />
             <div className="footer-sides__wrapper">
                 <FooterLeftSideContent />
+                <FooterCenterContent />
             </div>
         </div>
     )
