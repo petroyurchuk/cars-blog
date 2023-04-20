@@ -4,6 +4,7 @@ export type PropsSocialListArray = {
     number: string
     description: string
     bgColorOnHover: string
+    link: string
 }
 export const socialListArray: PropsSocialListArray[] = [
     {
@@ -12,6 +13,7 @@ export const socialListArray: PropsSocialListArray[] = [
         number: '22,036',
         description: 'fans',
         bgColorOnHover: '#516eab',
+        link: `https://www.facebook.com/TagDiv/`,
     },
     {
         id: 2,
@@ -19,6 +21,7 @@ export const socialListArray: PropsSocialListArray[] = [
         number: '3,752',
         description: 'followers',
         bgColorOnHover: '#29c5f6',
+        link: `https://twitter.com/tagdivofficial`,
     },
     {
         id: 3,
@@ -26,5 +29,6 @@ export const socialListArray: PropsSocialListArray[] = [
         number: '20,700',
         description: 'subscribers',
         bgColorOnHover: '#e14e42',
+        link: `https://www.youtube.com/tagdiv`,
     },
 ]

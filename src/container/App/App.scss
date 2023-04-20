@@ -6,8 +6,11 @@ body {
 }
 .wrapper-app {
     padding: 0;
-    background-color: #fff;
     max-width: 1164px;
     min-height: 100vh;
     overflow: hidden;
+}
+.wrapper-app__color {
+    background-color: #fff;
+    padding-bottom: 200px;
 }

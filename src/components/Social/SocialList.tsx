@@ -7,8 +7,12 @@ const SocialList = ({ socialListData }: PropsSocialList) => {
     return (
         <div className="social-list__wrapper">
             {socialListData.map(
-                ({ icon, description, number, bgColorOnHover }, index) => (
+                (
+                    { icon, description, number, bgColorOnHover, link },
+                    index
+                ) => (
                     <SocialListItem
+                        link={link}
                         key={index}
                         icon={icon}
                         description={description}
