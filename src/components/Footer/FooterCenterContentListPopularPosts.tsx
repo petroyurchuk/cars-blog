@@ -8,7 +8,6 @@ const FooterCenterContentListPopularPosts = (props: Props) => {
         ...postsArray.slice(0, 1),
     ]
 
-    console.log(arrayListPopularPosts)
     return (
         <div className="footer-center-content-list-popular-posts__container">
             {arrayListPopularPosts.map(

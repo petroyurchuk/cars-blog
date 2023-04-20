@@ -35,5 +35,33 @@ const ArrayOfNamesOfSubMenu: PropsArray[] = [
         linksNames: ['/more/deals', '/more/life', '/more/tuning'],
     },
 ]
+export const popularCategories: PropsArray[] = [
+    {
+        index: 6,
+        namesOfList: [
+            'Auto Shows',
+            'First Contact',
+            'Hi-Tech',
+            'Motor sports',
+            'New Generations',
+            'Oldies',
+            'Deals',
+            'Life',
+            'Tuning',
+        ],
+        linksNames: [
+            '/cars/auto-shows',
+            '/cars/first-contact',
+            '/cars/hi-tech',
+            '/cars/motor-sports',
+            '/cars/new-generations',
+            '/cars/oldies',
+            '/more/deals',
+            '/more/life',
+            '/more/tuning',
+        ],
+        className: 'default',
+    },
+]
 
 export default ArrayOfNamesOfSubMenu
